@@ -8,7 +8,7 @@
       <span class="menu-micro-login--anid-id">
         <img src="https://idd.cl/d/anid/assets/img/logo-anid-id.svg" alt="logo anid id">
       </span>
-      <a href="#" class="menu-micro-login--clave-unica">
+      <a href="https://accounts.claveunica.gob.cl/accounts/login/?next=/openid/authorize%3Fclient_id%3D9f3c39663dac4e6791811016adc217da%26redirect_uri%3Dhttps%253a%252f%252fclave.fondosdecultura.cl%252fES%252fAccount%252fResponseCU%26response_type%3Dcode%26scope%3Dopenid%2520run%2520name%26state%3DLVr8SaszYx5stKDEpcxKpG65g4YTeCA4vIUqmbgHZ2LLUcOKm8dCh-xd6HDqSQ-uNKgezeXmDVhYe8pUOSexYSK451tKEFucf5umDgqTdCY1" class="menu-micro-login--clave-unica">
         <img src="https://idd.cl/d/anid/assets/img/logo-clave-unica.svg" alt="logo anid id">
       </a>
     </div>
