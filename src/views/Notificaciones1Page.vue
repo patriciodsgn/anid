@@ -2,7 +2,7 @@
   <v-container>
     <div class="area">
     <h1 class="text-h4">Notificaciones</h1>
-    <p>Bienvenido, <strong>Andrés Álvarez</strong></p>
+    <p>Bienvenido, <strong>Patricio Andrés</strong></p>
     <p>al Sistema de Postulaciones de la Agencia Nacional de Investigación y Desarrollo.</p>
 
     <v-list>

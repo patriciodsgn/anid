@@ -2,38 +2,40 @@
   <v-app id="inspire">
     <!-- Mostrar el drawer solo si no estamos en la ruta raíz (/) -->
 
+
+
+
     <v-navigation-drawer v-if="shouldShowDrawer" v-model="drawer" :permanent="isLgAndUp" app>
     <!-- Contenido del drawer -->
 
-      <v-list>
+      <v-list v-if="isActiveRole1">
         <v-list-item-group>
-
-          <v-list-item href="/datos-principales" class="d-flex align-center">
+          <v-list-item href="/datos-principales1" class="d-flex align-center">
             <span><v-icon left>mdi-account</v-icon></span>
             <span>Datos Principales</span>
           </v-list-item>
 
-          <v-list-item href="/curriculum" class="d-flex align-center">
+          <v-list-item href="/curriculum1" class="d-flex align-center">
             <v-icon left>mdi-file-document</v-icon>
             <span>Curriculum</span>
           </v-list-item>
 
-          <v-list-item href="/postulacion-concursos" class="d-flex align-center">
+          <v-list-item href="/postulacion-concursos1" class="d-flex align-center">
             <v-icon left>mdi-trophy</v-icon>
             <span>Postulación Concursos</span>
           </v-list-item>
 
-          <v-list-item href="/notificaciones" class="d-flex align-center">
+          <v-list-item href="/notificaciones1" class="d-flex align-center">
             <v-icon left>mdi-bell</v-icon>
             <span>Notificaciones</span>
           </v-list-item>
 
-          <v-list-item href="/colaborador" class="d-flex align-center">
+          <v-list-item href="/colaborador1" class="d-flex align-center">
             <v-icon left>mdi-account-group</v-icon>
             <span>Colaborador</span>
           </v-list-item>
 
-          <v-list-item href="/configuracion" class="d-flex align-center">
+          <v-list-item href="/configuracion1" class="d-flex align-center">
             <v-icon left>mdi-cog</v-icon>
             <span>Configuración</span>
           </v-list-item>
@@ -48,6 +50,86 @@
         </v-list-item-group>
       </v-list>
 
+
+
+      <v-list v-if="isActiveRole2a">
+        <v-list-item-group>
+          <v-list-item href="/datos-principales2a" class="d-flex align-center">
+            <span><v-icon left>mdi-account</v-icon></span>
+            <span>Datos Principales</span>
+          </v-list-item>
+
+          <v-list-item href="/postulacion-concursos2a" class="d-flex align-center">
+            <v-icon left>mdi-trophy</v-icon>
+            <span>Postulación Concursos</span>
+          </v-list-item>
+
+          <v-list-item href="/notificaciones2a" class="d-flex align-center">
+            <v-icon left>mdi-bell</v-icon>
+            <span>Notificaciones</span>
+          </v-list-item>
+
+          <v-list-item href="/colaborador2a" class="d-flex align-center">
+            <v-icon left>mdi-account-group</v-icon>
+            <span>Colaborador</span>
+          </v-list-item>
+
+          <v-list-item href="/configuracion2a" class="d-flex align-center">
+            <v-icon left>mdi-cog</v-icon>
+            <span>Configuración</span>
+          </v-list-item>
+
+          <v-divider></v-divider>
+
+          <v-list-item href="/" class="d-flex align-center">
+            <v-icon left>mdi-logout</v-icon>
+            <span>Cerrar Sesión</span>
+          </v-list-item>
+
+        </v-list-item-group>
+      </v-list>
+
+
+
+
+      <v-list v-if="isActiveRole2b">
+        <v-list-item-group>
+          <v-list-item href="/datos-principales2b" class="d-flex align-center">
+            <span><v-icon left>mdi-account</v-icon></span>
+            <span>Datos Principales</span>
+          </v-list-item>
+
+          <v-list-item href="/postulacion-concursos2b" class="d-flex align-center">
+            <v-icon left>mdi-trophy</v-icon>
+            <span>Postulación Concursos</span>
+          </v-list-item>
+
+          <v-list-item href="/notificaciones2b" class="d-flex align-center">
+            <v-icon left>mdi-bell</v-icon>
+            <span>Notificaciones</span>
+          </v-list-item>
+
+          <v-list-item href="/colaborador2b" class="d-flex align-center">
+            <v-icon left>mdi-account-group</v-icon>
+            <span>Colaborador</span>
+          </v-list-item>
+
+          <v-list-item href="/configuracion2b" class="d-flex align-center">
+            <v-icon left>mdi-cog</v-icon>
+            <span>Configuración</span>
+          </v-list-item>
+
+          <v-divider></v-divider>
+
+          <v-list-item href="/" class="d-flex align-center">
+            <v-icon left>mdi-logout</v-icon>
+            <span>Cerrar Sesión</span>
+          </v-list-item>
+
+        </v-list-item-group>
+      </v-list>
+
+
     </v-navigation-drawer>
 
     <!-- Barra superior -->
@@ -57,6 +139,33 @@
         <div class="headline">SISTEMA DE POSTULACIONES</div>
         <div><small>Agencia Nacional de Investigación y Desarrollo</small></div>
       </v-app-bar-title>
+
+      
+      <div v-if="isActiveRole1" class="block-user-v1">
+        <img class="block-user-v1--img" src="https://idd.cl/d/anid/assets/img/profile-pato.png" alt="">
+        <div class="block-user-v1--profile">
+          <div class="block-user-v1--name">Patricio Garrido</div>
+          <div class="block-user-v1--org">USACH.cl</div>
+          <div class="block-user-v1--hist">Último ingreso: 22:12:12 - 8/10/24</div>
+        </div>
+      </div>
+      <div v-if="isActiveRole2a" class="block-user-v1">
+        <img class="block-user-v1--img" src="https://idd.cl/d/anid/assets/img/profile-cote.png" alt="">
+        <div class="block-user-v1--profile">
+          <div class="block-user-v1--name">María José Ensignia</div>
+          <div class="block-user-v1--org">PUC.cl</div>
+          <div class="block-user-v1--hist">Último ingreso: 10:21:21 - 9/11/24</div>
+        </div>
+      </div>
+      <div v-if="isActiveRole2b" class="block-user-v1">
+        <img class="block-user-v1--img" src="https://idd.cl/d/anid/assets/img/profile-cote.png" alt="">
+        <div class="block-user-v1--profile">
+          <div class="block-user-v1--name">María José Ensignia(R)</div>
+          <div class="block-user-v1--org">PUC.cl</div>
+          <div class="block-user-v1--hist">Último ingreso: 10:21:21 - 9/11/24</div>
+        </div>
+      </div>
+
     </v-app-bar>
 
     <v-main>
@@ -91,7 +200,7 @@ const route = useRoute()
 // Condición para mostrar el drawer solo en rutas específicas
 const shouldShowDrawer = computed(() => {
   // No mostrar el drawer en la ruta '/' o '/role'
-  return route.path !== '/' && route.path !== '/role'
+  return route.path !== '/' && route.path !== '/role2'
 })
 
 // Verificar si el drawer debería estar abierto en pantallas grandes
@@ -100,25 +209,56 @@ watch([isLgAndUp, shouldShowDrawer], ([isLgAndUpVal, shouldShowDrawerVal]) => {
     drawer.value = true
   }
 }, { immediate: true })
+
+
+
+// const isRootPath = computed(() => route.path === '/');
+const isActiveRole1 = computed(() => 
+  route.path === '/datos-principales1'
+  || route.path === '/curriculum1'
+  || route.path === '/postulacion-concursos1'
+  || route.path === '/notificaciones1'
+  || route.path === '/colaborador1'
+  || route.path === '/configuracion1'
+);
+
+const isActiveRole2a = computed(() => 
+  route.path === '/datos-principales2a'
+  || route.path === '/curriculum2a'
+  || route.path === '/postulacion-concursos2a'
+  || route.path === '/notificaciones2a'
+  || route.path === '/colaborador2a'
+  || route.path === '/configuracion2a'
+);
+
+const isActiveRole2b = computed(() => 
+  route.path === '/datos-principales2b'
+  || route.path === '/curriculum2b'
+  || route.path === '/postulacion-concursos2b'
+  || route.path === '/notificaciones2b'
+  || route.path === '/colaborador2b'
+  || route.path === '/configuracion2b'
+);
+
+
 </script>
 
 <style scoped>
 
-.v-toolbar {
-  background-color: #0a1631!important;
-  color: #fff;
-}
+  .v-toolbar {
+    background-color: #0a1631!important;
+    color: #fff;
+  }
 
-.v-navigation-drawer {
-  background-color: #0a1631;
-  color: #fff;
-}
+  .v-navigation-drawer {
+    background-color: #0a1631;
+    color: #fff;
+  }
 
-
-.v-footer{
-  background-color: #0a1631;
-  color: #fff;
-}
+  .v-footer{
+    background-color: #0a1631;
+    color: #fff;
+  }
 
 
 

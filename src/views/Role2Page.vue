@@ -33,10 +33,10 @@
 export default {
   methods: {
     goToPersona() {
-      this.$router.push('/notificaciones');
+      this.$router.push('/notificaciones2a');
     },
     goToInstitucion() {
-      this.$router.push('/notificaciones');
+      this.$router.push('/notificaciones2b');
     }
   }
 };
