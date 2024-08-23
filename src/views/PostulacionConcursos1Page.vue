@@ -1,49 +1,49 @@
 <template>
   <v-container>
-    <!-- Menú de Pestañas -->
-    <v-tabs v-model="activeTab" background-color="primary" dark>
-      <v-tab>Todos los Concursos</v-tab>
-      <v-tab>Mis Concursos</v-tab>
-    </v-tabs>
-<br>
-<br>
-<br>
-    <!-- Contenido de las Pestañas -->
-    <v-tabs-items v-model="activeTab">
-      <!-- Todos los Concursos -->
-      <v-tab-item>
-        <v-card>
-          <v-card-title>Todos los Concursos</v-card-title>
-          <v-card-text>
-            <v-list>
-              <v-list-item v-for="(concurso, index) in todosConcursos" :key="index">
-                <v-list-item-content>
-                  <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
-                  <v-list-item-subtitle>{{ concurso.descripcion }}</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-card-text>
-        </v-card>
-      </v-tab-item>
+    <!-- Menú simple con enlaces -->
+    <div>
+      <a href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> |
+      <a href="#" @click.prevent="mostrarMisConcursos">Mis Concursos</a>
+    </div>
 
-      <!-- Mis Concursos -->
-      <v-tab-item>
-        <v-card>
-          <v-card-title>Mis Concursos</v-card-title>
-          <v-card-text>
-            <v-list>
-              <v-list-item v-for="(concurso, index) in misConcursos" :key="index">
-                <v-list-item-content>
-                  <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
-                  <v-list-item-subtitle>{{ concurso.descripcion }}</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs-items>
+    <!-- Campo de búsqueda para filtrar los concursos -->
+    <div v-if="mostrarTodos">
+      <v-text-field
+        v-model="searchQuery"
+        label="Buscar Concurso"
+        variant="outlined"
+        placeholder="Escribe para buscar..."
+      ></v-text-field>
+      
+      <h3>Todos los Concursos</h3>
+      <v-list>
+        <v-list-item
+          v-for="(concurso, index) in filteredConcursos"
+          :key="index"
+          @click="seleccionarConcurso(concurso)"
+        >
+          <v-list-item-content>
+            <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
+            <v-list-item-subtitle>{{ concurso.codigo }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </div>
+
+    <div v-if="mostrarMis">
+      <h3>Mis Concursos</h3>
+      <v-list>
+        <v-list-item
+          v-for="(concurso, index) in misConcursos"
+          :key="index"
+        >
+          <v-list-item-content>
+            <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
+            <v-list-item-subtitle>{{ concurso.codigo }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </div>
   </v-container>
 </template>
 
@@ -51,23 +51,57 @@
 export default {
   data() {
     return {
-      activeTab: 0, // Controla la pestaña activa (0 = Todos los Concursos, 1 = Mis Concursos)
+      mostrarTodos: true, // Mostrar "Todos los Concursos" por defecto
+      mostrarMis: false, // Estado para mostrar "Mis Concursos"
+      searchQuery: "", // Valor para el input de búsqueda
+      // Lista de todos los concursos
       todosConcursos: [
-        { nombre: "Concurso A", descripcion: "Descripción del Concurso A" },
-        { nombre: "Concurso B", descripcion: "Descripción del Concurso B" },
-        { nombre: "Concurso C", descripcion: "Descripción del Concurso C" }
+        { nombre: "BECA DE DOCTORADO NACIONAL - Año Académico 2024", codigo: "(splqa)" },
+        { nombre: "Concurso Institutos Milenio 2024 Mayo", codigo: "(post-im)" },
+        { nombre: "Concurso Núcleos Ciencias Naturales y Exactas 2023", codigo: "(post-im)" }
       ],
-      misConcursos: [
-        { nombre: "Concurso B", descripcion: "Descripción del Concurso B" },
-        { nombre: "Concurso C", descripcion: "Descripción del Concurso C" }
-      ]
+      // Lista de concursos seleccionados (Mis Concursos)
+      misConcursos: []
     };
+  },
+  computed: {
+    // Filtra los concursos en base a la búsqueda
+    filteredConcursos() {
+      return this.todosConcursos.filter(concurso =>
+        concurso.nombre.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    }
+  },
+  methods: {
+    mostrarTodosConcursos() {
+      this.mostrarTodos = true;
+      this.mostrarMis = false;
+    },
+    mostrarMisConcursos() {
+      this.mostrarTodos = false;
+      this.mostrarMis = true;
+    },
+    seleccionarConcurso(concurso) {
+      // Añadir el concurso seleccionado a "Mis Concursos"
+      if (!this.misConcursos.includes(concurso)) {
+        this.misConcursos.push(concurso);
+        // Remover de "Todos los Concursos"
+        this.todosConcursos = this.todosConcursos.filter(c => c !== concurso);
+      }
+    }
   }
 };
 </script>
 
 <style scoped>
-.v-tabs {
-  margin-bottom: 20px;
+a {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+a:hover {
+  color: darkblue;
 }
 </style>
