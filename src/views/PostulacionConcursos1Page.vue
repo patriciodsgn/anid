@@ -5,7 +5,9 @@
       <v-tab>Todos los Concursos</v-tab>
       <v-tab>Mis Concursos</v-tab>
     </v-tabs>
-
+<br>
+<br>
+<br>
     <!-- Contenido de las Pestañas -->
     <v-tabs-items v-model="activeTab">
       <!-- Todos los Concursos -->
