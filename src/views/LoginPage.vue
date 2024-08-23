@@ -1,7 +1,7 @@
 <template>
   <v-container class="d-flex justify-center align-center block-v1 h-100" fill-height>
     <div class="area">
-      <v-card class="elevation-12" max-width="400">
+      <v-card class="card-v1" max-width="400">
         <!-- Mini menú horizontal -->
         <div class="menu-micro-login">
           <span class="menu-micro-login--anid-id">

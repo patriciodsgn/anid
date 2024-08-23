@@ -1,8 +1,10 @@
 <template>
-  <v-container class="d-flex justify-center align-center" fill-height>
+    <v-container class="d-flex justify-center align-center block-v1 h-100" fill-height>
+
+    <div class="area-v3">
     <v-row justify="center">
       <v-col cols="12" md="5">
-        <v-card class="elevation-3">
+        <v-card class="card-v1">
           <v-card-title class="text-center">
             <v-icon class="mr-2">mdi-account</v-icon> Persona
           </v-card-title>
@@ -14,7 +16,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" md="5">
-        <v-card class="elevation-3">
+        <v-card class="card-v1">
           <v-card-title class="text-center">
             <v-icon class="mr-2">mdi-office-building</v-icon> Institución
           </v-card-title>
@@ -26,6 +28,7 @@
         </v-card>
       </v-col>
     </v-row>
+  </div>
   </v-container>
 </template>
 
@@ -43,20 +46,7 @@ export default {
 </script>
 
 <style scoped>
-.v-container {
-  background-color: #f2f2f2;
-}
 
-.v-card {
-  padding: 20px;
-  text-align: center;
-}
 
-.v-card-title {
-  font-size: 18px;
-}
 
-.v-btn {
-  width: 100%;
-}
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-container>
-      <div class="area">
+      <div class="area-v2">
       <h2>Datos Principales Page</h2>
       <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
         <v-row>
-          <v-col cols="12" sm="6">
+          <v-col cols="12" sm="8">
             <v-text-field
               v-model="formData.nombres"
               :rules="[v => !!v || 'Los nombres son requeridos']"
@@ -15,26 +15,24 @@
             ></v-text-field>
           </v-col>
 
-          <v-col cols="12" sm="6">
+          <v-col cols="12" sm="8">
             <v-text-field
-              v-model="formData.apellidoPaterno"
-              :rules="[v => !!v || 'El apellido paterno es requerido']"
-              label="Apellido Paterno"
+              v-model="formData.primerApellido"
+              :rules="[v => !!v || 'El primer apellido es requerido']"
+              label="Primer Apellido"
               variant="outlined"
               required
             ></v-text-field>
           </v-col>
-
-          <v-col cols="12" sm="6">
+          <v-col cols="12" sm="8">
             <v-text-field
-              v-model="formData.apellidoMaterno"
-              label="Apellido Materno"
+            v-model="formData.segundoApellido"
+              label="Segundo Apellido"
               variant="outlined"
-              required
-            ></v-text-field>
-          </v-col>
-
-          <v-col cols="12" sm="6">
+              ></v-text-field>
+            </v-col>
+            
+            <v-col cols="12" sm="8">
             <v-text-field
               v-model="formData.nombreSocial"
               label="Nombre Social"
@@ -42,19 +40,26 @@
             ></v-text-field>
           </v-col>
 
+
+          <div class="line-v1"></div>
+
+
+
+
           <v-col cols="12" sm="6">
-            <v-text-field
-              v-model="formData.ciPasaporte"
-              :rules="[v => !!v || 'CI o Pasaporte es requerido']"
-              label="CI o Pasaporte"
+            <v-select
+              v-model="formData.runPasaporte"
+              :items="['RUN', 'Pasaporte',]"
+              label="RUN o Pasaporte"
               variant="outlined"
               required
-            ></v-text-field>
+            ></v-select>
           </v-col>
+
 
           <v-col cols="12" sm="6">
             <v-text-field
-              v-model="formData.numero"
+              v-model="formData.runPasaporteNumero"
               :rules="[v => !!v || 'El número es requerido']"
               label="Número"
               variant="outlined"
@@ -65,12 +70,23 @@
           <v-col cols="12" sm="6">
             <v-select
               v-model="formData.sexoRegistral"
-              :items="['Masculino', 'Femenino', 'Otro']"
+              :items="['Masculino', 'Femenino', 'No Binario', 'Otro']"
               label="Sexo Registral"
               variant="outlined"
               required
             ></v-select>
           </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-select
+              v-model="formData.sexoDeclarativo"
+              :items="['Masculino', 'Femenino', 'Transmasculino', 'Transfemenino', 'No Binario', 'Otro']"
+              label="Sexo Declarativo"
+              variant="outlined"
+              required
+            ></v-select>
+          </v-col>
+
 
           <v-col cols="12" sm="6">
             <v-text-field
@@ -123,7 +139,7 @@
           </v-col>
 
           <v-col cols="12">
-            <v-btn color="primary" type="submit" :disabled="!valid">
+            <v-btn class="btn-primary-v2" type="submit" :disabled="!valid">
               Guardar
             </v-btn>
           </v-col>
@@ -139,20 +155,22 @@ export default {
   name: 'DatosPrincipalesPage',
   data() {
     return {
-      valid: false,
+      valid: true,
       formData: {
-        nombres: '',
-        apellidoPaterno: '',
-        apellidoMaterno: '',
-        nombreSocial: '',
-        ciPasaporte: '',
-        numero: '',
-        sexoRegistral: '',
-        nacionalidad: '',
-        fechaNacimiento: '',
-        paisResidencia: '',
-        regionResidencia: '',
-        lugarEmpleo: ''
+        nombres : 'María José',
+        primerApellido : 'Ensignia',
+        segundoApellido : 'Diaz',
+        nombreSocial : '',
+        runPasaporte : 'RUN',
+        runPasaporteNumero : '15.700.111-4',
+        sexoRegistral : 'Femenino',
+        sexoDeclarativo : 'Femenino',
+        nacionalidad : 'Chilena',
+        fechaNacimiento : '1982-08-08',
+        paisResidencia : '',
+        regionResidencia : '',
+        lugarEmpleo : ''
+
       }
     };
   },
@@ -166,3 +184,4 @@ export default {
   }
 };
 </script>
+
