@@ -140,9 +140,10 @@
     <!-- Barra superior -->
     <v-app-bar class="v-app-bar">
       <v-app-bar-nav-icon v-if="shouldShowDrawer && !isLgAndUp" @click="drawer = !drawer" />
-      <v-app-bar-title>
-        <div class="headline">SISTEMA DE POSTULACIONES</div>
-        <div><small>Agencia Nacional de Investigación y Desarrollo</small></div>
+
+      <v-app-bar-title class="logo-main">
+        <img class="logo-main--img" src="https://idd.cl/d/anid/assets/img/logo-anid.png" alt="">
+        <span class="logo-main--text">SISTEMA DE POSTULACIONES</span>
       </v-app-bar-title>
 
       
@@ -150,7 +151,7 @@
         <img class="block-user-v1--img" src="https://idd.cl/d/anid/assets/img/profile-pato.png" alt="">
         <div class="block-user-v1--profile">
           <div class="block-user-v1--name">Patricio Garrido</div>
-          <div class="block-user-v1--org">USACH.cl</div>
+          <div class="block-user-v1--org">patricio@usach.cl</div>
           <div class="block-user-v1--hist">Último ingreso: 22:12:12 - 8/10/24</div>
         </div>
       </div>

@@ -57,6 +57,9 @@
 </template>
 
 <script>
+// Importa el archivo JSON desde la carpeta data
+import concursosData from "@/data/concursos.json";
+
 export default {
   data() {
     return {
@@ -64,13 +67,8 @@ export default {
       mostrarMis: false, // Estado para mostrar "Mis Concursos"
       searchQuery: "", // Valor para el input de búsqueda
       concursoSeleccionado: null, // Almacena el concurso seleccionado para cargar el componente dinámico
-      // Lista de todos los concursos
-      todosConcursos: [
-        { nombre: "BECA DE DOCTORADO NACIONAL - Año Académico 2024", codigo: "(splqa)", component: "ConcursoBecaDoctorado" },
-        { nombre: "Concurso Núcleos Ciencias Naturales y Exactas 2023", codigo: "(post-im)", component: "ConcursoNucleosNaturales" },
-        { nombre: "(qa01) Concurso Startup Ciencia, Año 2024", codigo: "(qa01)", component: "ConcursoStartupCiencia" },
-        { nombre: "(qa01) Fondecyt de Iniciación en Investigación 2025", codigo: "(qa01)", component: "FondecytIniciacion" }
-      ],
+      // Lista de todos los concursos cargados desde el JSON
+      todosConcursos: concursosData, 
       // Lista de concursos seleccionados (Mis Concursos)
       misConcursos: []
     };
@@ -135,4 +133,3 @@ a:hover {
   color: darkblue;
 }
 </style>
-

@@ -1409,6 +1409,40 @@ v-theme--light */
   padding: 16px;
 }
 
+
+
+.logo-main{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: fit-content;
+  gap: 0;
+  height: 50px;
+  /* border: 4px solid #00f; */
+  align-content: center;
+  
+  
+
+}
+
+.logo-main--img{
+  position: relative;
+  
+  width: auto;
+  height: 100%;
+  /* border: 4px solid #00f; */
+}
+
+.logo-main--text{
+  position: relative;
+  /* display: none; */
+  height: 60px;
+  font-size: 16px;
+    
+  width: fit-content;
+  display: none;
+  border: 2px solid #00f;
+}
 /* @media Media queries */
 
 /* xl */
