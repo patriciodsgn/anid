@@ -1,4 +1,5 @@
 
+
 /* src/assets/styles/global.css */
 :root{
 
@@ -1331,7 +1332,10 @@ v-theme--light */
   position: relative;
 }
 
-
+.v-simple-table td{
+  width: 100%!important;
+  border: 1px solid #000 !important;
+}
 
 .btn-success-v1{
   display: block;
