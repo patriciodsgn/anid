@@ -1302,6 +1302,9 @@ v-theme--light */
   box-shadow: none!important;
   cursor: pointer!important;
   height: 50px!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-primary-v2:hover{
@@ -1310,6 +1313,22 @@ v-theme--light */
   background-color: #003b8d!important;
   color: #ffff!important;
   box-shadow: none!important;
+}
+
+.micro-menu-cv{
+  display: flex;
+  position: relative;
+}
+
+.label-cv-anid{
+  padding: 4px;
+  border: 1px solid #000;
+  background-color: #003b8d!important;
+}
+
+.btn-primary-v3{
+  border: 1px solid #000;
+  position: relative;
 }
 
 

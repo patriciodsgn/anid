@@ -1,7 +1,19 @@
 <template>
   <v-container>
+    <!-- Botones al inicio -->
+
 
     <div class="area-v2">
+
+      <div class="menu-micro-login">
+    
+        <span class="menu-micro-login--anid-id" style="color:white">
+            Curriculum ANID
+        </span>
+        <a class="menu-micro-login--clave-unica" style="color: white" href="https://investigadores.anid.cl/">
+          Ir a Portal del Investigador
+        </a>
+    </div>
     <h2 class="mb-4">Curriculum</h2>
 
     <!-- 1. Enlace a Curriculum Completo -->
@@ -138,10 +150,7 @@
 
     <!-- Botón de Guardar -->
     <v-btn class="btn-success-v1">GUARDAR</v-btn>
-  </div>
-
-
-
+    </div>
   </v-container>
 </template>
 

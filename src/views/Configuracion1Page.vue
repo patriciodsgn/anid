@@ -1,7 +1,8 @@
 <template>
   <div>
     <v-container>
-      <div class="area">
+      <div class="area-v2">
+
       <h2>Configuración de Cuenta</h2>
       <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
         <v-row>
@@ -86,7 +87,7 @@
           </v-col>
 
           <v-col cols="12">
-            <v-btn color="primary" type="submit" :disabled="!valid">
+            <v-btn class="btn-primary-v1" type="submit" :disabled="!valid">
               Guardar Configuración
             </v-btn>
           </v-col>

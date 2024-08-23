@@ -157,16 +157,16 @@ export default {
     return {
       valid: true,
       formData: {
-        nombres : 'María José',
-        primerApellido : 'Ensignia',
-        segundoApellido : 'Diaz',
+        nombres : 'Patricio Andrés',
+        primerApellido : 'Garrido',
+        segundoApellido : 'García',
         nombreSocial : '',
         runPasaporte : 'RUN',
         runPasaporteNumero : '15.700.111-4',
-        sexoRegistral : 'Femenino',
-        sexoDeclarativo : 'Femenino',
+        sexoRegistral : 'Masculino',
+        sexoDeclarativo : 'Masculino',
         nacionalidad : 'Chilena',
-        fechaNacimiento : '1982-08-08',
+        fechaNacimiento : '1984-08-08',
         paisResidencia : '',
         regionResidencia : '',
         lugarEmpleo : ''

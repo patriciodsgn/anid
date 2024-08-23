@@ -1,5 +1,7 @@
 <template>
   <v-container>
+    <div class="area-v2">
+
     <h2>Invitaciones para ser Colaborador en Proyectos</h2>
     <v-row>
       <v-col v-for="(invitacion, index) in invitaciones" :key="index" cols="12" sm="6" md="4">
@@ -40,7 +42,7 @@
         </v-list>
       </v-col>
     </v-row>
-
+</div>
   </v-container>
 </template>
 

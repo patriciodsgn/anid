@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <div class="area">
-    <h1 class="text-h4">Notificaciones</h1>
+    <div class="area-v2">
+    <h2>Notificaciones</h2>
     <p>Bienvenido, <strong>Patricio Andrés</strong></p>
     <p>al Sistema de Postulaciones de la Agencia Nacional de Investigación y Desarrollo.</p>
 
