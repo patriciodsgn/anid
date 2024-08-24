@@ -142,8 +142,7 @@
       <v-app-bar-nav-icon v-if="shouldShowDrawer && !isLgAndUp" @click="drawer = !drawer" />
 
       <v-app-bar-title class="logo-main">
-        <img class="logo-main--img" src="https://idd.cl/d/anid/assets/img/logo-anid.png" alt="">
-        <span class="logo-main--text">SISTEMA DE POSTULACIONES</span>
+        <img src="https://idd.cl/d/anid/assets/img/logo-plataforma.png" alt="">
       </v-app-bar-title>
 
       

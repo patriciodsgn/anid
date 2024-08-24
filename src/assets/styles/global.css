@@ -1199,16 +1199,27 @@ v-app-bar */
 v-navigation-drawer--active
 v-theme--light */
 {
-  /* border: 11px solid hsl(0, 100%, 50%);   */
+  
+  border: 11px solid hsl(0, 100%, 50%);  
   /* z-index: 600!important; */
 }
 
+.logo-main{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+  border: 1px solid #00f;
+}
 
+.logo-main img{
+  width: 300px;
+}
 
 .v-footer {
   display: flex !important;
   flex-direction: row!important;
-  padding: 24px 24px 24px 324px;
+  padding: 24px;
   z-index: 1000;
   height: fit-content;
   /* border: 11px solid hsl(207, 88%, 41%); */
