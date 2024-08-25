@@ -27,10 +27,14 @@
             <v-list-item-content>
               <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
             </v-list-item-content>
-            <!-- Botones de agregar y detalles -->
+            <!-- Botones de agregar y detalles con íconos -->
             <v-list-item-action>
-              <v-btn small @click="seleccionarConcurso(concurso)">Agregar</v-btn>
-              <v-btn small @click="mostrarDetalleConcurso(concurso)">Detalles</v-btn>
+              <v-btn icon @click="seleccionarConcurso(concurso)">
+                <v-icon>mdi-plus</v-icon> <!-- Icono de agregar -->
+              </v-btn>
+              <v-btn icon @click="mostrarDetalleConcurso(concurso)">
+                <v-icon>mdi-information</v-icon> <!-- Icono de detalles -->
+              </v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-list>
@@ -47,10 +51,14 @@
             <v-list-item-content>
               <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
             </v-list-item-content>
-            <!-- Botones de ver y eliminar -->
+            <!-- Botones de ver y eliminar con íconos -->
             <v-list-item-action>
-              <v-btn small @click="mostrarDetalleConcurso(concurso)">Ver Concurso</v-btn>
-              <v-btn small color="red" @click="eliminarConcurso(concurso)">Eliminar</v-btn>
+              <v-btn icon @click="mostrarDetalleConcurso(concurso)">
+                <v-icon>mdi-eye</v-icon> <!-- Icono de ver concurso -->
+              </v-btn>
+              <v-btn icon color="red" @click="eliminarConcurso(concurso)">
+                <v-icon>mdi-delete</v-icon> <!-- Icono de eliminar concurso -->
+              </v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-list>
