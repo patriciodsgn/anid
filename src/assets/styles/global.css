@@ -1467,7 +1467,7 @@ v-app-bar */
   color: #fff;
   z-index: 2000;
   /* border: 5px solid hwb(240 0% 0%); */
-  border: 5px solid hwb(240 0% 0%);
+  /* border: 5px solid hwb(240 0% 0%); */
   flex-direction: row;
   justify-content: space-between;
 }
