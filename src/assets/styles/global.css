@@ -1386,14 +1386,14 @@ v-theme--light */
 */
 
 .header{
-  display: flex;
-  flex-wrap: wrap;
+  display: flex!important;
+  flex-wrap: wrap!important;
   background-color: #0a1631!important;
   color: #fff!important;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  left: 0;
+  justify-content: space-between!important;
+  align-items: center!important;
+  align-content: center!important;
+  left: 0!important;
   z-index: 500!important;
   /* border: 11px solid #00f; */
   /* border: 11px solid hsl(0, 100%, 50%);   */
@@ -1401,10 +1401,10 @@ v-theme--light */
 
 .header .header__ham{
   color: #fff!important;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #0f0;
-  margin: 0;
+  align-items: center!important;
+  justify-content: center!important;
+  border: 1px solid #0f0!important;
+  margin: 0!important;
 }
 /* v-toolbar--density-default
 v-theme--light
