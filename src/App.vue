@@ -11,7 +11,6 @@
       <v-list v-if="isActiveRole1">
         <v-list-item-group>
 
-
           <v-list-item :class="{ 'active-list-item': route.path === '/datos-principales1' }" href="/datos-principales1" class="d-flex align-center" @click="closeDrawer">
             <span><v-icon left>mdi-account</v-icon></span>
             <span>Datos Principales</span>
@@ -138,10 +137,10 @@
     </v-navigation-drawer>
 
     <!-- Barra superior -->
-    <v-app-bar class="v-app-bar">
-      <v-app-bar-nav-icon v-if="shouldShowDrawer && !isLgAndUp" @click="drawer = !drawer" />
+    <v-app-bar class="header">
+      <v-app-bar-nav-icon class="header__ham" v-if="shouldShowDrawer && !isLgAndUp" @click="drawer = !drawer" />
 
-      <v-app-bar-title class="logo-main">
+      <v-app-bar-title class="header__logo" >
         <img src="https://idd.cl/d/anid/assets/img/logo-plataforma.png" alt="">
       </v-app-bar-title>
 
@@ -190,6 +189,8 @@
 import { ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
+// import AppBar from '@/components/layout/AppBar.vue'
+// import AppMenu from '@/components/layout/AppMenu.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 
 // Estado del drawer
@@ -250,20 +251,6 @@ const isActiveRole2b = computed(() =>
 
 <style scoped>
 
-  .v-toolbar {
-    background-color: #0a1631!important;
-    color: #fff;
-  }
-
-  .v-navigation-drawer {
-    background-color: #0a1631;
-    color: #fff;
-  }
-
-  .v-footer{
-    background-color: #0a1631;
-    color: #fff;
-  }
 
 
 
