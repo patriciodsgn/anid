@@ -105,13 +105,13 @@ export default {
     return {
       valid: false,
       formData: {
-        username: '',
-        email: '',
-        password: '',
+        username: 'patricio_garr',
+        email: 'patricio@usash.cl',
+        password: '******',
         confirmPassword: '',
-        preferredLanguage: '',
-        theme: '',
-        notifications: false,
+        preferredLanguage: 'Español',
+        theme: 'Claro',
+        notifications: true,
         twoFactorAuth: false
       }
     };

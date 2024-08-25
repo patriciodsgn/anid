@@ -2,9 +2,9 @@
   <v-container>
     <div class="area-v2">
       <!-- Menú simple con enlaces -->
-      <div class="menu-micro-login">
-        <a class="menu-micro-login--clave-unica" style="width: 46%; color: white" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
-        <a class="menu-micro-login--clave-unica" style="width: 46%; color: white" href="#" @click.prevent="mostrarMisConcursos">Mis Concursos</a>
+      <div class="menu-postulaciones">
+        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
+        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarMisConcursos">Mis Postulaciones</a>
       </div>
 
       <h2 class="mb-4">Postulación Concursos</h2>
@@ -23,32 +23,41 @@
           <v-list-item
             v-for="(concurso, index) in filteredConcursos"
             :key="index"
-            @click="seleccionarConcurso(concurso)"
           >
             <v-list-item-content>
               <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
-              <v-list-item-subtitle>{{ concurso.codigo }}</v-list-item-subtitle>
             </v-list-item-content>
+            <!-- Botones de agregar y detalles -->
+            <v-list-item-action>
+              <v-btn small @click="seleccionarConcurso(concurso)">Agregar</v-btn>
+              <v-btn small @click="mostrarDetalleConcurso(concurso)">Detalles</v-btn>
+            </v-list-item-action>
           </v-list-item>
         </v-list>
       </div>
 
       <!-- Mostrar lista de "Mis Concursos" y cargar componente dinámico cuando se selecciona -->
       <div v-if="mostrarMis">
-        <h3>Mis Concursos</h3>
+        <h3>Mis Postulaciones</h3>
         <v-list>
           <v-list-item
             v-for="(concurso, index) in misConcursos"
             :key="index"
-            @click="mostrarDetalleConcurso(concurso)"
           >
             <v-list-item-content>
               <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
-              <v-list-item-subtitle>{{ concurso.codigo }}</v-list-item-subtitle>
             </v-list-item-content>
+            <!-- Botones de ver y eliminar -->
+            <v-list-item-action>
+              <v-btn small @click="mostrarDetalleConcurso(concurso)">Ver Concurso</v-btn>
+              <v-btn small color="red" @click="eliminarConcurso(concurso)">Eliminar</v-btn>
+            </v-list-item-action>
           </v-list-item>
         </v-list>
         
+        <!-- Botón para regresar a la lista de todos los concursos -->
+        <v-btn @click="mostrarTodosConcursos">Volver a Todos los Concursos</v-btn>
+
         <!-- Cargar componente dinámico -->
         <component v-if="concursoSeleccionado" :is="concursoSeleccionado.component"></component>
       </div>
@@ -100,6 +109,12 @@ export default {
         this.todosConcursos = this.todosConcursos.filter(c => c !== concurso);
       }
     },
+    eliminarConcurso(concurso) {
+      // Eliminar el concurso de "Mis Concursos"
+      this.misConcursos = this.misConcursos.filter(c => c !== concurso);
+      // Añadir de nuevo a "Todos los Concursos"
+      this.todosConcursos.push(concurso);
+    },
     mostrarDetalleConcurso(concurso) {
       this.concursoSeleccionado = concurso; // Cargar el componente del concurso seleccionado
     }
@@ -122,14 +137,7 @@ export default {
 </script>
 
 <style scoped>
-a {
-  cursor: pointer;
-  color: blue;
-  text-decoration: underline;
-  margin: 10px;
-}
-
-a:hover {
-  color: darkblue;
+.v-btn {
+  margin: 5px;
 }
 </style>

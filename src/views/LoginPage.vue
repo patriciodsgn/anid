@@ -1,3 +1,42 @@
+<script>
+
+import logoAnidId from "../assets/images/logo-anid_id.svg";
+import logoClaveUnica from "../assets/images/logo-clave_unica.svg";
+
+export default {
+  data() {
+    return {
+      username: '',
+      password: '',
+      errorMessage: '', // Variable para mostrar mensajes de error
+      logoAnidId,
+      logoClaveUnica,
+    };
+  },
+
+  methods: {
+    login() {
+      // Simular un inicio de sesión exitoso
+      if (this.username === 'patricio@usach.cl' && this.password === '123456') {
+        console.log('Iniciar sesión con', this.username, this.password);
+        // Redirigir a la página de Notificación 1
+        this.$router.push('/notificaciones1');
+      } else if (this.username === 'mariajose@puc.cl' && this.password === '123456') {
+        console.log('Iniciar sesión con', this.username, this.password);
+        // Redirigir a la página de Role 2
+        this.$router.push('/role2');
+      } else {
+        this.errorMessage = 'Credenciales incorrectas'; // Mostrar el mensaje de error
+      }
+    },
+    forgotPassword() {
+      this.errorMessage = 'Recuperar contraseña no disponible en este momento.';
+    },
+  },
+};
+</script>
+
+
 <template>
   <v-container class="d-flex justify-center align-center block-v1 h-100" fill-height>
     <div class="area">
@@ -5,10 +44,10 @@
         <!-- Mini menú horizontal -->
         <div class="menu-micro-login">
           <span class="menu-micro-login--anid-id">
-            <img src="https://idd.cl/d/anid/assets/img/logo-anid-id.svg" alt="logo anid id">
+            <img :src="logoAnidId" alt="logo anid id">
           </span>
           <a href="https://accounts.claveunica.gob.cl/accounts/login/?next=/openid/authorize%3Fclient_id%3D9f3c39663dac4e6791811016adc217da%26redirect_uri%3Dhttps%253a%252f%252fclave.fondosdecultura.cl%252fES%252fAccount%252fResponseCU%26response_type%3Dcode%26scope%3Dopenid%2520run%2520name%26state%3DLVr8SaszYx5stKDEpcxKpG65g4YTeCA4vIUqmbgHZ2LLUcOKm8dCh-xd6HDqSQ-uNKgezeXmDVhYe8pUOSexYSK451tKEFucf5umDgqTdCY1" class="menu-micro-login--clave-unica">
-            <img src="https://idd.cl/d/anid/assets/img/logo-clave-unica.svg" alt="logo anid id">
+            <img :src="logoClaveUnica" alt="logo-clave-unica">
           </a>
         </div>
 
@@ -51,36 +90,6 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      username: '',
-      password: '',
-      errorMessage: '', // Variable para mostrar mensajes de error
-    };
-  },
-  methods: {
-    login() {
-      // Simular un inicio de sesión exitoso
-      if (this.username === 'patricio@usach.cl' && this.password === '123456') {
-        console.log('Iniciar sesión con', this.username, this.password);
-        // Redirigir a la página de Notificación 1
-        this.$router.push('/notificaciones1');
-      } else if (this.username === 'mariajose@puc.cl' && this.password === '123456') {
-        console.log('Iniciar sesión con', this.username, this.password);
-        // Redirigir a la página de Role 2
-        this.$router.push('/role2');
-      } else {
-        this.errorMessage = 'Credenciales incorrectas'; // Mostrar el mensaje de error
-      }
-    },
-    forgotPassword() {
-      this.errorMessage = 'Recuperar contraseña no disponible en este momento.';
-    },
-  },
-};
-</script>
 
 
 <style scoped>

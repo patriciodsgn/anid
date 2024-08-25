@@ -146,7 +146,7 @@
 
       
       <div v-if="isActiveRole1" class="user">
-        <img class="user__pic" src="https://idd.cl/d/anid/assets/img/profile-pato.png" alt="">
+        <img class="user__pic" :src=profilePato alt="">
         <div class="user__profile">
           <div class="user__name">Patricio Garrido</div>
           <div class="user__org">patricio@usach.cl</div>
@@ -184,7 +184,7 @@
 
 <script setup>
 
-
+import profilePato from "./assets/images/profile-pato.png";
 
 import { ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
