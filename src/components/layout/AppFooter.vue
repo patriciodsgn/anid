@@ -1,6 +1,6 @@
 <template>
   <v-footer class="footer">
-    <v-container class="container">
+    <!-- <v-container class="container"> -->
 
         <div class="footer__logo">
           <img :src="logoAnid" alt="Logo ANID">
@@ -13,7 +13,7 @@
           <v-btn class="link-alt" text href="https://anid.cl/">ANID.cl</v-btn>
         </div>
       
-    </v-container>
+    <!-- </v-container> -->
   </v-footer>
 </template>
 
