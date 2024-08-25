@@ -1334,14 +1334,10 @@ v-theme--light */
   height: 50px;
   /* border: 4px solid #00f; */
   align-content: center;
-  
-  
-
 }
 
 .logo-main--img{
   position: relative;
-  
   width: auto;
   height: 100%;
   /* border: 4px solid #00f; */
@@ -1352,7 +1348,6 @@ v-theme--light */
   /* display: none; */
   height: 60px;
   font-size: 16px;
-    
   width: fit-content;
   display: none;
   border: 2px solid #00f;
@@ -1470,6 +1465,7 @@ v-app-bar */
   flex-direction: row;
   background-color: #0a1631;
   color: #fff;
+  z-index: 2000;
 /* border: 5px solid hwb(240 0% 0%); */
 }
 
@@ -1539,7 +1535,7 @@ v-app-bar */
 /* sm */
 @media (max-width: 960px) {
   .header .header__logo img{  
-    height: 14px;
+    height: 24px;
   }
   
   .user__profile{display: none!important;}
@@ -1587,6 +1583,6 @@ v-app-bar */
   }
 
   .header .header__logo img{  
-    height: 8px;
+    height: 15px;
   }
 }
