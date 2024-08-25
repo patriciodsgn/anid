@@ -145,12 +145,12 @@
       </v-app-bar-title>
 
       
-      <div v-if="isActiveRole1" class="block-user-v1">
-        <img class="block-user-v1--img" src="https://idd.cl/d/anid/assets/img/profile-pato.png" alt="">
-        <div class="block-user-v1--profile">
-          <div class="block-user-v1--name">Patricio Garrido</div>
-          <div class="block-user-v1--org">patricio@usach.cl</div>
-          <div class="block-user-v1--hist">Último ingreso: 22:12:12 - 8/10/24</div>
+      <div v-if="isActiveRole1" class="user">
+        <img class="user__pic" src="https://idd.cl/d/anid/assets/img/profile-pato.png" alt="">
+        <div class="user__profile">
+          <div class="user__name">Patricio Garrido</div>
+          <div class="user__org">patricio@usach.cl</div>
+          <div class="user__hist">Último ingreso: 22:12:12 - 8/10/24</div>
         </div>
       </div>
       <div v-if="isActiveRole2a" class="block-user-v1">

@@ -1283,44 +1283,30 @@ v-theme--light */
 
 
 
-.block-user-v1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-right: 24px;
-}
 
-.block-user-v1--img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
 
-.block-user-v1--profile{
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  gap: 4px;
-  /* border: 1px solid #0f0; */
-  
-}
 
-.block-user-v1--name{
-  /* border: 1px solid #0f0; */
-  line-height: 1;
-  font-weight: 500;
-  
-}
 
-.block-user-v1--org{
-  line-height: 1;  
-}
 
-.block-user-v1--hist{
-  line-height: 1;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1386,6 +1372,8 @@ v-theme--light */
 */
 
 .header{
+  position: fixed;
+  width: 100%!important;;
   display: flex!important;
   flex-wrap: wrap!important;
   background-color: #0a1631!important;
@@ -1403,7 +1391,7 @@ v-theme--light */
   color: #fff!important;
   align-items: center!important;
   justify-content: center!important;
-  border: 1px solid #0f0!important;
+  /* border: 1px solid #0f0!important; */
   margin: 0!important;
 }
 /* v-toolbar--density-default
@@ -1417,12 +1405,61 @@ v-app-bar */
   flex-wrap: wrap;
   position: relative;
   
-  border: 1px solid #f0f!important;
+  /* border: 1px solid #f0f!important; */
 }
 
 .header .header__logo img{  
   height: 20px;
 }
+
+
+
+
+
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-right: 24px;
+}
+
+.user__pic{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user__profile{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 4px;
+}
+
+.user__name{
+  line-height: 1;
+  font-weight: 500;
+}
+
+.user__org{
+  line-height: 1;  
+}
+
+.user__hist{
+  line-height: 1;  
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1495,11 +1532,17 @@ v-app-bar */
 /* md */
 @media (max-width: 1264px) {
   /* .footer{border: 11px solid hsl(183, 100%, 50%);} */
+  
 }
 
 
 /* sm */
 @media (max-width: 960px) {
+  .header .header__logo img{  
+    height: 14px;
+  }
+  
+  .user__profile{display: none!important;}
   .footer{
     /* border: 11px solid hsl(264, 100%, 50%); */
     .container{
@@ -1510,6 +1553,7 @@ v-app-bar */
       gap: 16px;
       z-index: 1000;  
     }
+
 
     .footer__logo{
       /* border: 11px solid hsl(264, 100%, 50%); */
@@ -1532,7 +1576,7 @@ v-app-bar */
     flex-direction: column;
     margin-bottom: 16px;
   }
-  
+
 }
 
 /* xs */
@@ -1540,5 +1584,9 @@ v-app-bar */
   .footer__menu{
     /* border: 11px solid #0f0; */
     
+  }
+
+  .header .header__logo img{  
+    height: 8px;
   }
 }
