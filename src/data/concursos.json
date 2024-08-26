@@ -1,22 +1,123 @@
 [
-  { "nombre": "CONCURSO FONDO ALMA-ANID PARA EL DESARROLLO DE LA ASTRONOMÍA CHILENA 2024", "codigo": "alma24" },
-  { "nombre": "Concurso Anillos de Investigación en Áreas Temáticas Específicas 2024", "codigo": "anillosinvestigacion24" },
-  { "nombre": "Concurso Anillos Regulares de Tecnología 2024", "codigo": "anillosregular24" },
-  { "nombre": "Concurso Apoyo Centros de Excelencia con Financiamiento Basal 2023", "codigo": "centrosbasal23" },
-  { "nombre": "BECAS CHILE DE DOCTORADO EN EL EXTRANJERO - Convocatoria 2024", "codigo": "doctoradoextranjero24" },
-  { "nombre": "BECA DE DOCTORADO NACIONAL - Año Académico 2024", "codigo": "doctoradonacional24" },
-  { "nombre": "Concurso Núcleos Ciencias Naturales y Exactas 2023", "codigo": "nucleoscienciasnaturales23" },
-  { "nombre": "CONVOCATORIA NACIONAL SUBVENCIÓN A LA INSTALACIÓN EN LA ACADEMIA 2024", "codigo": "instalacionacademia24" },
-  { "nombre": "DESAFÍOS PÚBLICOS 2024: CONSEJO DE DEFENSA DEL ESTADO", "codigo": "desafiospublicos24" },
-  { "nombre": "XIII Concurso de Equipamiento Científico y Tecnológico Mediano 2024", "codigo": "equipamientomediano24" },
-  { "nombre": "Fondecyt de Iniciación en Investigación 2025", "codigo": "iniciacioninvestigacion25" },
-  { "nombre": "Concurso Nacional de Proyectos de Investigación y Desarrollo en Salud, Fonis 2024", "codigo": "investigacionsalud24" },
-  { "nombre": "FONDECYT de Postdoctorado 2025", "codigo": "postdoctorado25" },
-  { "nombre": "FONDECYT Regular 2025", "codigo": "regular25" },
-  { "nombre": "FONDO DE PUBLICACIÓN DE REVISTAS CIENTÍFICAS 2024", "codigo": "revistas24" },
-  { "nombre": "Concurso IDeA I+D 2025", "codigo": "idea25" },
-  { "nombre": "Instrumento de Consolidación de Resultados del Programa Nueva Ingeniería para el 2030, Ingeniería 2030-Tercera Etapa - Convocatoria 2024", "codigo": "nuevaingenieria30" },
-  { "nombre": "SCIA - 417 - CONCURSO DE APOYO A CENTROS DE EXCELENCIA EN INVESTIGACIÓN EN ÁREAS PRIORITARIAS - FONDAP 2023", "codigo": "centrosexcelencia23" },
-  { "nombre": "Concurso Startup Ciencia, Año 2024", "codigo": "startupciencia24" },
-  { "nombre": "Concurso Startup Ciencia, Año 2025", "codigo": "startupciencia25" }
+  { 
+    "nombre": "Fondo ALMA para el Desarrollo de la Astronomía Chilena",
+    "nombre_largo": "CONCURSO FONDO ALMA-ANID PARA EL DESARROLLO DE LA ASTRONOMÍA CHILENA 2024",
+    "img": "https://anid.cl/wp-content/uploads/2022/06/observatory-2656173_1920-1536x1020.jpg",
+    "link": "https://anid.cl/redes-estrategia-y-conocimiento/fondo-alma-para-el-desarrollo-de-la-astronomia-chilena/",
+    "codigo": "alma24"
+   },{ 
+    "nombre": "Concurso Anillos de Investigación Temáticos 2024 en Litio y Salares",
+    "nombre_largo": "Concurso Anillos de Investigación en Áreas Temáticas Específicas 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/10/anillos-areas-tematicas-2024_web_op.jpg",
+    "link": "https://anid.cl/concursos/concurso-anillos-de-investigacion-tematicos-2024-en-litio-y-salares/",
+    "codigo": "anillosinvestigacion24"
+   },{ 
+    "nombre": "Concurso Anillos de Tecnología 2024",
+    "nombre_largo": "Concurso Anillos Regulares de Tecnología 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/10/anillos-tec-2024_web_op.jpg",
+    "link": "https://anid.cl/concursos/concurso-anillos-de-tecnologia-2024/",
+    "codigo": "anillosregular24"
+   },{ 
+    "nombre": "Concurso Apoyo a Centros Científicos y Tecnológicos de Excelencia con Financiamiento Basal 2023",
+    "nombre_largo": "Concurso Apoyo Centros de Excelencia con Financiamiento Basal 2023",
+    "img": "https://anid.cl/wp-content/uploads/2023/02/basal2023.jpeg",
+    "link": "https://anid.cl/concursos/concurso-apoyo-a-centros-cientificos-y-tecnologicos-de-excelencia-con-financiamiento-basal-2023-2/",
+    "codigo": "centrosbasal23"
+   },{ 
+    "nombre": "Doctorado Becas Chile 2024",
+    "nombre_largo": "BECAS CHILE DE DOCTORADO EN EL EXTRANJERO - Convocatoria 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/doctorado-becas-chile-2024_web_Op.jpg",
+    "link": "https://anid.cl/concursos/doctorado-becas-chile-2024/",
+    "codigo": "doctoradoextranjero24"
+   },{ 
+    "nombre": "Beca de Doctorado Nacional, Año Académico 2024",
+    "nombre_largo": "BECA DE DOCTORADO NACIONAL - Año Académico 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/08/doctorado-nacional-2024-op.jpg",
+    "link": "https://anid.cl/concursos/beca-de-doctorado-nacional-ano-academico-2024/",
+    "codigo": "doctoradonacional24"
+   },{ 
+    "nombre": "Concurso Núcleos Milenio en Ciencias Naturales y Exactas 2023",
+    "nombre_largo": "Concurso Núcleos Ciencias Naturales y Exactas 2023",
+    "img": "https://anid.cl/wp-content/uploads/2023/02/twt-ciencias-naturales-y-exactas.jpg",
+    "link": "https://anid.cl/concursos/concurso-nucleos-milenio-en-ciencias-naturales-y-exactas-2023/",
+    "codigo": "nucleoscienciasnaturales23"
+   },{ 
+    "nombre": "Subvención a la Instalación en la Academia 2024",
+    "nombre_largo": "CONVOCATORIA NACIONAL SUBVENCIÓN A LA INSTALACIÓN EN LA ACADEMIA 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/09/instalacion-en-la-academia-2024_web.jpg",
+    "link": "https://anid.cl/concursos/subvencion-a-la-instalacion-en-la-academia-2024/",
+    "codigo": "instalacionacademia24"
+   },{ 
+    "nombre": "Desafíos Públicos 2024",
+    "nombre_largo": "DESAFÍOS PÚBLICOS 2024: CONSEJO DE DEFENSA DEL ESTADO",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/Desafios-publicos-2024_web-op.jpg",
+    "link": "https://anid.cl/concursos/desafios-publicos-2024/",
+    "codigo": "desafiospublicos24"
+   },{ 
+    "nombre": "Concurso de Equipamiento Científico y Tecnológico Mediano 2024",
+    "nombre_largo": "XIII Concurso de Equipamiento Científico y Tecnológico Mediano 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/EQUIPAMIENTO-MEDIANO-2024_web_op.jpg",
+    "link": "https://anid.cl/concursos/concurso-de-equipamiento-cientifico-y-tecnologico-mediano-2024/",
+    "codigo": "equipamientomediano24"
+   },{ 
+    "nombre": "Concurso de Proyectos Fondecyt de Iniciación en Investigación 2025",
+    "nombre_largo": "Fondecyt de Iniciación en Investigación 2025",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/fondecyt-iniciacion-2025_web_op.jpg",
+    "link": "https://anid.cl/concursos/concurso-de-proyectos-fondecyt-de-iniciacion-en-investigacion-2025/",
+    "codigo": "iniciacioninvestigacion25"
+   },{ 
+    "nombre": "Proyectos de Investigación y Desarrollo en Salud (FONIS) 2024",
+    "nombre_largo": "Concurso Nacional de Proyectos de Investigación y Desarrollo en Salud, Fonis 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/fonis-2024_web_op.jpg",
+    "link": "https://anid.cl/concursos/proyectos-de-investigacion-y-desarrollo-en-salud-fonis-2024/",
+    "codigo": "investigacionsalud24"
+   },{ 
+    "nombre": "Concurso Fondecyt de Postdoctorado 2025",
+    "nombre_largo": "FONDECYT de Postdoctorado 2025",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/Fondecyt-postdoctorado-2025_WEB_op.jpg",
+    "link": "https://anid.cl/concursos/concurso-fondecyt-de-postdoctorado-2025/",
+    "codigo": "postdoctorado25"
+   },{ 
+    "nombre": "Concurso de Proyectos Fondecyt Regular 2025",
+    "nombre_largo": "FONDECYT Regular 2025",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/fondecyt-regular-2025-web_op.jpg",
+    "link": "https://anid.cl/concursos/concurso-de-proyectos-fondecyt-regular-2025/",
+    "codigo": "regular25"
+   },{ 
+    "nombre": "Concurso Fondo de Publicación de Revistas Científicas 2024",
+    "nombre_largo": "FONDO DE PUBLICACIÓN DE REVISTAS CIENTÍFICAS 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/publicacion-revistas-cientificas_web_op.jpg",
+    "link": "https://anid.cl/concursos/concurso-fondo-de-publicacion-de-revistas-cientificas-2024/",
+    "codigo": "revistas24"
+   },{ 
+    "nombre": "Concurso IDeA I+D 2025",
+    "nombre_largo": "Concurso IDeA I+D 2025",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/IDeA-2025_web-op.jpg",
+    "link": "https://anid.cl/concursos/concurso-idea-id-2025/",
+    "codigo": "idea25"
+   },{ 
+    "nombre": "Concurso Ingeniería 2030 Etapa 3",
+    "nombre_largo": "Instrumento de Consolidación de Resultados del Programa Nueva Ingeniería para el 2030, Ingeniería 2030-Tercera Etapa - Convocatoria 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/ingenieria-2030-2024_web-op.jpg",
+    "link": "https://anid.cl/concursos/concurso-ingenieria-2030-etapa-3/",
+    "codigo": "nuevaingenieria30"
+   },{ 
+    "nombre": "Concurso de Apoyo a Centros de Excelencia en Investigación en Áreas Prioritarias – FONDAP 2023",
+    "nombre_largo": "SCIA - 417 - CONCURSO DE APOYO A CENTROS DE EXCELENCIA EN INVESTIGACIÓN EN ÁREAS PRIORITARIAS - FONDAP 2023",
+    "img": "https://anid.cl/wp-content/uploads/2023/06/fondap.jpeg",
+    "link": "https://anid.cl/concursos/concurso-de-apoyo-a-centros-de-excelencia-en-investigacion-en-areas-prioritarias-fondap-2023/",
+    "codigo": "centrosexcelencia23"
+   },{ 
+    "nombre": "Startup Ciencia 2024",
+    "nombre_largo": "Concurso Startup Ciencia, Año 2024",
+    "img": "https://anid.cl/wp-content/uploads/2023/08/satrup-ciencia-2024.png",
+    "link": "https://anid.cl/concursos/startup-ciencia-2024/",
+    "codigo": "startupciencia24"
+   },{ 
+    "nombre": "Startup Ciencia 2025",
+    "nombre_largo": "Concurso Startup Ciencia, Año 2025",
+    "img": "https://anid.cl/wp-content/uploads/2023/12/startup-ciencia-2024-web-op.jpg",
+    "link": "https://anid.cl/concursos/startup-ciencia-2025/",
+    "codigo": "startupciencia25"
+  }
 ]

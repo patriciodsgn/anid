@@ -1,4 +1,6 @@
 <template>
+  <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
+
   <v-container>
     <div class="area-v2">
       <!-- Menú simple con enlaces -->
@@ -69,6 +71,20 @@
         <!-- Cargar componente dinámico -->
         <component v-if="concursoSeleccionado" :is="concursoSeleccionado.component"></component>
       </div>
+
+      <!-- Diálogo para mostrar el iframe con detalles del concurso -->
+      <v-dialog v-model="dialog" width="800">
+        <v-card>
+          <v-card-title class="headline">Detalles del Concurso</v-card-title>
+          <v-card-text>
+            <iframe :src="concursoSeleccionado.link" width="100%" height="500px" frameborder="0"></iframe>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
     </div>
   </v-container>
 </template>
@@ -84,6 +100,7 @@ export default {
       mostrarMis: false, // Estado para mostrar "Mis Concursos"
       searchQuery: "", // Valor para el input de búsqueda
       concursoSeleccionado: null, // Almacena el concurso seleccionado para cargar el componente dinámico
+      dialog: false, // Controla la visibilidad del diálogo
       // Lista de todos los concursos cargados desde el JSON
       todosConcursos: concursosData, 
       // Lista de concursos seleccionados (Mis Concursos)
@@ -124,7 +141,8 @@ export default {
       this.todosConcursos.push(concurso);
     },
     mostrarDetalleConcurso(concurso) {
-      this.concursoSeleccionado = concurso; // Cargar el componente del concurso seleccionado
+      this.concursoSeleccionado = concurso; // Selecciona el concurso
+      this.dialog = true; // Abre el diálogo para mostrar el iframe
     }
   },
   components: {
@@ -148,4 +166,9 @@ export default {
 .v-btn {
   margin: 5px;
 }
+
+  iframe{
+    heigth: 500px;
+  }
+
 </style>
