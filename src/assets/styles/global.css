@@ -969,6 +969,11 @@ body {
   line-height: 150%;
 }
 
+.table-hist{
+  img{
+    width: 100px;
+  }  
+}
 
 .v-card{
   background-color: var(--Blanco__Base);

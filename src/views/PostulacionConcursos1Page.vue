@@ -1,23 +1,143 @@
 <template>
   <v-container>
     <div class="area-v2">
+      <h2 class="mb-4">Postulación Concursos</h2>
       <!-- Menú simple con enlaces -->
       <div class="menu-postulaciones">
+        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarPostulacionesActivas">Postulaciones Activas</a>
+        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarHistorialPostulaciones">Historial Postulaciones</a> 
         <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
-        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarMisConcursos">Mis Postulaciones</a>
       </div>
 
-      <h2 class="mb-4">Postulación Concursos</h2>
+
+      <!-- Mostrar lista de "Mis Concursos" y cargar componente dinámico cuando se selecciona -->
+      <div v-if="mostrarMis">
+        <br>  
+        <h3>Mis Postulaciones</h3>
+
+        <v-list>
+          <v-list-item
+            v-for="(concurso, index) in misConcursos"
+            :key="index"
+          >
+            <v-list-item-content>
+              <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
+            </v-list-item-content>
+            <!-- Botones de ver y eliminar con íconos -->
+            <v-list-item-action>
+              <v-btn icon @click="mostrarDetalleConcurso(concurso)">
+                <v-icon>mdi-eye</v-icon> <!-- Icono de ver concurso -->
+              </v-btn>
+              <v-btn icon color="red" @click="eliminarConcurso(concurso)">
+                <v-icon>mdi-delete</v-icon> <!-- Icono de eliminar concurso -->
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-list>
+
+        <!-- Botón para regresar a la lista de todos los concursos -->
+        <!-- <v-btn @click="mostrarTodosConcursos">Volver a Todos los Concursos</v-btn> -->
+
+        <!-- Diálogo para mostrar el iframe con detalles del concurso -->
+        <v-dialog v-model="dialog" width="800">
+          <v-card>
+            <v-card-title class="headline">Detalles del Concurso</v-card-title>
+            <v-card-text>
+              <iframe :src="concursoSeleccionado.enlace" width="100%" height="500px" frameborder="0"></iframe>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+
+      </div>
+
+
+
+
+
+      <!-- Campo de búsqueda para filtrar los concursos -->
+      <div v-if="mostrarHist">
+        <br>
+        <h3>Historial de Postulaciones</h3>
+
+        <v-table density="compact" class="table-hist">
+          <thead>
+            <tr>
+              <th class="text-left">
+                Fecha
+              </th>
+              <th class="text-left">
+                Imagen
+              </th>
+              <th class="text-left">
+                Postulación
+              </th>
+              <th class="text-left">
+                Enlace
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+    <td>10-10-23</td>
+    <td><img src="https://anid.cl/wp-content/uploads/2023/02/twt-ciencias-naturales-y-exactas.jpg"></td>
+    <td>Concurso Núcleos Milenio en Ciencias Naturales y Exactas 2023"</td>
+    <td><a href="https://anid.cl/concursos/concurso-nucleos-milenio-en-ciencias-naturales-y-exactas-2023/">enlace</a></td>
+</tr>
+<tr>
+    <td>10-10-23</td>
+    <td><img src="https://anid.cl/wp-content/uploads/2023/09/instalacion-en-la-academia-2024_web.jpg"></td>
+    <td>Subvención a la Instalación en la Academia 2024"</td>
+    <td><a href="https://anid.cl/concursos/subvencion-a-la-instalacion-en-la-academia-2024/">enlace</a></td>
+</tr>
+<tr>
+    <td>10-10-23</td>
+    <td><img src="https://anid.cl/wp-content/uploads/2023/12/Desafios-publicos-2024_web-op.jpg"></td>
+    <td>Desafíos Públicos 2024"</td>
+    <td><a href="https://anid.cl/concursos/desafios-publicos-2024/">enlace</a></td>
+</tr>
+<tr>
+    <td>10-10-23</td>
+    <td><img src="https://anid.cl/wp-content/uploads/2023/12/EQUIPAMIENTO-MEDIANO-2024_web_op.jpg"></td>
+    <td>Concurso de Equipamiento Científico y Tecnológico Mediano 2024"</td>
+    <td><a href="https://anid.cl/concursos/concurso-de-equipamiento-cientifico-y-tecnologico-mediano-2024/">enlace</a></td>
+</tr>
+<tr>
+    <td>10-10-23</td>
+    <td><img src="https://anid.cl/wp-content/uploads/2023/12/fondecyt-iniciacion-2025_web_op.jpg"></td>
+    <td>Concurso de Proyectos Fondecyt de Iniciación en Investigación 2025"</td>
+    <td><a href="https://anid.cl/concursos/concurso-de-proyectos-fondecyt-de-iniciacion-en-investigacion-2025/">enlace</a></td>
+</tr>
+<tr>
+    <td>10-10-23</td>
+    <td><img src="https://anid.cl/wp-content/uploads/2023/12/fonis-2024_web_op.jpg"></td>
+    <td>Proyectos de Investigación y Desarrollo en Salud (FONIS) 2024"</td>
+    <td><a href="https://anid.cl/concursos/proyectos-de-investigacion-y-desarrollo-en-salud-fonis-2024/">enlace</a></td>
+</tr>
+
+          </tbody>
+        </v-table>
+
+
+      </div>
+
+
+
+
+
+
 
       <!-- Campo de búsqueda para filtrar los concursos -->
       <div v-if="mostrarTodos">
+        <br>  
         <v-text-field
           v-model="searchQuery"
           label="Buscar Concurso"
           variant="outlined"
           placeholder="Escribe para buscar..."
         ></v-text-field>
-        
         <h3>Todos los Concursos</h3>
         <v-list>
           <v-list-item
@@ -40,46 +160,18 @@
         </v-list>
       </div>
 
-      <!-- Mostrar lista de "Mis Concursos" y cargar componente dinámico cuando se selecciona -->
-      <div v-if="mostrarMis">
-        <h3>Mis Postulaciones</h3>
-        <v-list>
-          <v-list-item
-            v-for="(concurso, index) in misConcursos"
-            :key="index"
-          >
-            <v-list-item-content>
-              <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
-            </v-list-item-content>
-            <!-- Botones de ver y eliminar con íconos -->
-            <v-list-item-action>
-              <v-btn icon @click="mostrarDetalleConcurso(concurso)">
-                <v-icon>mdi-eye</v-icon> <!-- Icono de ver concurso -->
-              </v-btn>
-              <v-btn icon color="red" @click="eliminarConcurso(concurso)">
-                <v-icon>mdi-delete</v-icon> <!-- Icono de eliminar concurso -->
-              </v-btn>
-            </v-list-item-action>
-          </v-list-item>
-        </v-list>
-        
-        <!-- Botón para regresar a la lista de todos los concursos -->
-        <v-btn @click="mostrarTodosConcursos">Volver a Todos los Concursos</v-btn>
 
-        <!-- Diálogo para mostrar el iframe con detalles del concurso -->
-        <v-dialog v-model="dialog" width="800">
-          <v-card>
-            <v-card-title class="headline">Detalles del Concurso</v-card-title>
-            <v-card-text>
-              <iframe :src="concursoSeleccionado.link" width="100%" height="500px" frameborder="0"></iframe>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
 
-      </div>
+
+
+
+
+
+
+
+
+
+      
     </div>
   </v-container>
 </template>
@@ -90,8 +182,9 @@ import concursosData from "@/data/concursos.json";
 export default {
   data() {
     return {
-      mostrarTodos: true, // Mostrar "Todos los Concursos" por defecto
-      mostrarMis: false, // Estado para mostrar "Mis Concursos"
+      mostrarTodos: false, // Mostrar "Todos los Concursos" por defecto
+      mostrarMis: true, // Estado para mostrar "Mis Concursos"
+      mostrarHist: false, // Estado para mostrar "Mis Concursos"
       searchQuery: "", // Valor para el input de búsqueda
       concursoSeleccionado: null, // Almacena el concurso seleccionado para cargar el componente dinámico
       dialog: false, // Controla la visibilidad del diálogo
@@ -111,14 +204,22 @@ export default {
     }
   },
   methods: {
-    mostrarTodosConcursos() {
-      this.mostrarTodos = true;
-      this.mostrarMis = false;
+    mostrarPostulacionesActivas() {
+      this.mostrarMis = true;
+      this.mostrarHist = false;
+      this.mostrarTodos = false;
       this.concursoSeleccionado = null;
     },
-    mostrarMisConcursos() {
+    mostrarHistorialPostulaciones() {
+      this.mostrarMis = false;
+      this.mostrarHist = true;
       this.mostrarTodos = false;
-      this.mostrarMis = true;
+      this.concursoSeleccionado = null;
+    },
+    mostrarTodosConcursos() {
+      this.mostrarMis = false;
+      this.mostrarHist = false;
+      this.mostrarTodos = true;
       this.concursoSeleccionado = null;
     },
     seleccionarConcurso(concurso) {
@@ -142,7 +243,7 @@ export default {
       const top = (screen.height / 2) - (popupHeight / 2);
 
       window.open(
-        concurso.link,  // Abre el enlace del concurso seleccionado
+        concurso.enlace,  // Abre el enlace del concurso seleccionado
         'ConcursoPopup', 
         `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable,scrollbars`
       );
@@ -156,9 +257,8 @@ export default {
 .v-btn {
   margin: 5px;
 }
+.v-list-item__underlay{
+  display:flex;
 
-iframe {
-  height: 500px;
 }
-
 </style>

@@ -11,6 +11,11 @@
       <v-list v-if="isActiveRole1">
         <v-list-item-group>
 
+          <v-list-item :class="{ 'active-list-item': route.path === '/postulacion-concursos1' }" href="/postulacion-concursos1" class="d-flex align-center" @click="closeDrawer">
+            <v-icon left>mdi-trophy</v-icon>
+            <span>Postulación Concursos</span>
+          </v-list-item>
+
           <v-list-item :class="{ 'active-list-item': route.path === '/datos-principales1' }" href="/datos-principales1" class="d-flex align-center" @click="closeDrawer">
             <span><v-icon left>mdi-account</v-icon></span>
             <span>Datos Principales</span>
@@ -21,10 +26,6 @@
             <span>Curriculum</span>
           </v-list-item>
 
-          <v-list-item :class="{ 'active-list-item': route.path === '/postulacion-concursos1' }" href="/postulacion-concursos1" class="d-flex align-center" @click="closeDrawer">
-            <v-icon left>mdi-trophy</v-icon>
-            <span>Postulación Concursos</span>
-          </v-list-item>
 
           <v-list-item :class="{ 'active-list-item': route.path === '/notificaciones1' }" href="/notificaciones1" class="d-flex align-center" @click="closeDrawer">
             <v-icon left>mdi-bell</v-icon>
