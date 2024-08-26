@@ -30,12 +30,20 @@
               label="Segundo Apellido"
               variant="outlined"
               ></v-text-field>
-            </v-col>
+          </v-col>
             
-            <v-col cols="12" sm="8">
+          <v-col cols="12" sm="8">
             <v-text-field
               v-model="formData.nombreSocial"
               label="Nombre Social"
+              variant="outlined"
+            ></v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="8">
+            <v-text-field
+              v-model="formData.pronombre"
+              label="Pronombre"
               variant="outlined"
             ></v-text-field>
           </v-col>
@@ -161,6 +169,7 @@ export default {
         primerApellido : 'Garrido',
         segundoApellido : 'García',
         nombreSocial : '',
+        pronombre: 'El',
         runPasaporte : 'RUN',
         runPasaporteNumero : '15.700.111-4',
         sexoRegistral : 'Masculino',

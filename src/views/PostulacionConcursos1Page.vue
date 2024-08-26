@@ -3,6 +3,12 @@
     <div class="area-v2">
       <h2 class="mb-4">Postulación Concursos</h2>
       <br>
+      <p><b>¡Bienvenido a tu espacio de gestión de concursos!</b></p>
+      <p>Aquí podrás postularte, ver tu historial y explorar nuevos concursos.</p>
+      <br>
+      <p> <b>Postulaciones Activas</b>: Gestiona las postulaciones en las que estás participando actualmente.</p>
+      <p> <b>Historial de Postulaciones</b>: Revisa tus postulaciones anteriores y su estado.</p>
+      <p> <b>Todos los Concursos</b>: Descubre y aplica a nuevos concursos disponibles.</p>
       <br>
       <!-- Menú simple con enlaces -->
       <div class="menu-postulaciones">
