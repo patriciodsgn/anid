@@ -1064,6 +1064,9 @@ background: rgba(0, 0, 0, 0.1);
 }
 
 
+.sangria{
+  margin-left: 40px;
+}
 
 
 
@@ -1073,6 +1076,7 @@ h2 {
   font-family: 'Roboto Slab', serif; /* Aplica la fuente correcta */
   font-size: 32px;
   line-height: 150%;
+  border-bottom: 1px solid #949494;
 }
 
 .menu-micro-login--anid-id,
@@ -1162,10 +1166,10 @@ h2 {
 
   position: relative;
   display: flex;
-  
+  gap: 8px;
   justify-content: stretch;
   align-content: stretch;
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
 
   .menu-postulaciones__btn{
     background-color: #0f69c4;
@@ -1174,6 +1178,11 @@ h2 {
     text-decoration: none;
     padding: 12px;
   }
+
+  .menu-postulaciones__btn:hover{
+    filter: brightness(0.8);
+  }
+  
 
 }
 

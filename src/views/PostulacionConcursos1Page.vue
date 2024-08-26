@@ -2,6 +2,8 @@
   <v-container>
     <div class="area-v2">
       <h2 class="mb-4">Postulación Concursos</h2>
+      <br>
+      <br>
       <!-- Menú simple con enlaces -->
       <div class="menu-postulaciones">
         <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarPostulacionesActivas">Postulaciones Activas</a>

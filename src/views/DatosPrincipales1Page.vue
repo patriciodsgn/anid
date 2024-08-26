@@ -9,7 +9,7 @@
             <v-text-field
               v-model="formData.nombres"
               :rules="[v => !!v || 'Los nombres son requeridos']"
-              label="Nombres"
+              label="Nombres *"
               variant="outlined"
               required
             ></v-text-field>
@@ -19,7 +19,7 @@
             <v-text-field
               v-model="formData.primerApellido"
               :rules="[v => !!v || 'El primer apellido es requerido']"
-              label="Primer Apellido"
+              label="Primer Apellido *"
               variant="outlined"
               required
             ></v-text-field>
@@ -50,7 +50,7 @@
             <v-select
               v-model="formData.runPasaporte"
               :items="['RUN', 'Pasaporte',]"
-              label="RUN o Pasaporte"
+              label="RUN o Pasaporte *"
               variant="outlined"
               required
             ></v-select>
@@ -61,7 +61,7 @@
             <v-text-field
               v-model="formData.runPasaporteNumero"
               :rules="[v => !!v || 'El número es requerido']"
-              label="Número"
+              label="Número *"
               variant="outlined"
               required
             ></v-text-field>
@@ -71,7 +71,7 @@
             <v-select
               v-model="formData.sexoRegistral"
               :items="['Masculino', 'Femenino', 'No Binario', 'Otro']"
-              label="Sexo Registral"
+              label="Sexo Registral *"
               variant="outlined"
               required
             ></v-select>
@@ -92,7 +92,7 @@
             <v-text-field
               v-model="formData.nacionalidad"
               :rules="[v => !!v || 'La nacionalidad es requerida']"
-              label="Nacionalidad"
+              label="Nacionalidad *"
               variant="outlined"
               required
             ></v-text-field>
@@ -102,7 +102,7 @@
             <v-text-field
               v-model="formData.fechaNacimiento"
               :rules="[v => !!v || 'La fecha de nacimiento es requerida']"
-              label="Fecha de Nacimiento"
+              label="Fecha de Nacimiento *"
               type="date"
               variant="outlined"
               required
@@ -113,7 +113,7 @@
             <v-text-field
               v-model="formData.paisResidencia"
               :rules="[v => !!v || 'El país de residencia es requerido']"
-              label="País de Residencia"
+              label="País de Residencia *"
               variant="outlined"
               required
             ></v-text-field>
@@ -123,7 +123,7 @@
             <v-text-field
               v-model="formData.regionResidencia"
               :rules="[v => !!v || 'La región de residencia es requerida']"
-              label="Región de Residencia"
+              label="Región de Residencia *"
               variant="outlined"
               required
             ></v-text-field>
@@ -167,8 +167,8 @@ export default {
         sexoDeclarativo : 'Masculino',
         nacionalidad : 'Chilena',
         fechaNacimiento : '1984-08-08',
-        paisResidencia : '',
-        regionResidencia : '',
+        paisResidencia : 'Chile',
+        regionResidencia : 'Metropolitana',
         lugarEmpleo : ''
 
       }
