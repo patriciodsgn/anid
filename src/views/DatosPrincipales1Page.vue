@@ -78,7 +78,7 @@
           <v-col cols="12" sm="6">
             <v-select
               v-model="formData.sexoRegistral"
-              :items="['Masculino', 'Femenino', 'No Binario', 'Otro']"
+              :items="['Masculino', 'Femenino', 'No Binario']"
               label="Sexo Registral *"
               variant="outlined"
               required
@@ -89,7 +89,7 @@
             <v-select
               v-model="formData.sexoDeclarativo"
               :items="['Masculino', 'Femenino', 'Transmasculino', 'Transfemenino', 'No Binario', 'Otro']"
-              label="Sexo Declarativo"
+              label="Género Declarativo"
               variant="outlined"
               required
             ></v-select>
