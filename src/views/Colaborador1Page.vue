@@ -3,6 +3,8 @@
     <div class="area-v2">
 
     <h2>Invitaciones para ser Colaborador en Proyectos</h2>
+    <p>En esta sección, encontrarás invitaciones para unirte como colaborador en distintos proyectos. Puedes revisar los detalles de cada invitación y tomar una decisión. Tienes la opción de <b>Aceptar</b> para unirte al equipo o <b>Rechazar</b> si decides no participar en el proyecto.</p> 
+    <br>
     <v-row>
       <v-col v-for="(invitacion, index) in invitaciones" :key="index" cols="12" sm="6" md="4">
         <v-card class="card-v1">

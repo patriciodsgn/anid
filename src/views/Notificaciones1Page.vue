@@ -29,21 +29,21 @@
     
     <v-list>
       <v-list-item>
-        <div>
+        <div class="item-group">
           <v-icon color="green">mdi-circle</v-icon>
           Complete su postulacion <b>doctorado becas chile 2024</b> (Cierre: 23 de Diciembre 2024)
         </div>
       </v-list-item>
 
       <v-list-item>
-        <div>
+        <div class="item-group">
           <v-icon color="red-darken-2">mdi-circle</v-icon>
           Este mes se cierra las postulaciones a <b>Magíster Funcionarios(as) Públicos 2024</b> (Cierre: 30 de Agosto 2024)
         </div>
       </v-list-item>
 
       <v-list-item>
-        <div>
+        <div class="item-group">
           <v-icon color="yellow-darken-2">mdi-circle</v-icon>
           Tiene una nueva invitacion a  <b>firmar Patrocinio</b> (Cierre: 23 de Diciembre 2024)
         </div>

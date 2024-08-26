@@ -1532,7 +1532,10 @@ v-app-bar */
 
 
 
-
+.item-group{
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
 
 /* @media Media queries */
 
@@ -1617,6 +1620,12 @@ v-app-bar */
     
   }
 
+  .menu-postulaciones{
+    flex-direction: column;
+    .menu-postulaciones__btn{
+      width: 100%;
+    }
+  }
   .header .header__logo img{  
     height: 15px;
   }
