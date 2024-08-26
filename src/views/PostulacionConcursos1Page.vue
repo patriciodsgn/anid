@@ -9,6 +9,13 @@
         <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
       </div>
 
+      <!-- Snackbar para mostrar la notificación -->
+      <v-snackbar v-model="snackbar" :timeout="3000" top right>
+        {{ snackbarMessage }}
+        <v-btn color="grey" text @click="snackbar = false">Cerrar</v-btn>
+      </v-snackbar>
+
+
 
       <!-- Mostrar lista de "Mis Concursos" y cargar componente dinámico cuando se selecciona -->
       <div v-if="mostrarMis">
@@ -20,18 +27,21 @@
             v-for="(concurso, index) in misConcursos"
             :key="index"
           >
-            <v-list-item-content>
-              <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
-            </v-list-item-content>
+            <div class="item__name">{{ concurso.nombre }}</div>
+
+            
+
+<!-- Botones de agregar y detalles con íconos -->
+
             <!-- Botones de ver y eliminar con íconos -->
-            <v-list-item-action>
-              <v-btn icon @click="mostrarDetalleConcurso(concurso)">
+            
+              <v-btn icon class="btn__icon--eye" @click="mostrarDetalleConcurso(concurso)">
                 <v-icon>mdi-eye</v-icon> <!-- Icono de ver concurso -->
               </v-btn>
-              <v-btn icon color="red" @click="eliminarConcurso(concurso)">
+              <v-btn icon class="btn__icon--delete" @click="eliminarConcurso(concurso)">
                 <v-icon>mdi-delete</v-icon> <!-- Icono de eliminar concurso -->
               </v-btn>
-            </v-list-item-action>
+            
           </v-list-item>
         </v-list>
 
@@ -84,37 +94,37 @@
     <td>10-10-23</td>
     <td><img src="https://anid.cl/wp-content/uploads/2023/02/twt-ciencias-naturales-y-exactas.jpg"></td>
     <td>Concurso Núcleos Milenio en Ciencias Naturales y Exactas 2023"</td>
-    <td><a href="https://anid.cl/concursos/concurso-nucleos-milenio-en-ciencias-naturales-y-exactas-2023/">enlace</a></td>
+    <td><a class="btn__icon-link" href="https://anid.cl/concursos/concurso-nucleos-milenio-en-ciencias-naturales-y-exactas-2023/"><v-icon>mdi-link</v-icon></a></td>
 </tr>
 <tr>
     <td>10-10-23</td>
     <td><img src="https://anid.cl/wp-content/uploads/2023/09/instalacion-en-la-academia-2024_web.jpg"></td>
     <td>Subvención a la Instalación en la Academia 2024"</td>
-    <td><a href="https://anid.cl/concursos/subvencion-a-la-instalacion-en-la-academia-2024/">enlace</a></td>
+    <td><a class="btn__icon-link" href="https://anid.cl/concursos/subvencion-a-la-instalacion-en-la-academia-2024/"><v-icon>mdi-link</v-icon></a></td>
 </tr>
 <tr>
     <td>10-10-23</td>
     <td><img src="https://anid.cl/wp-content/uploads/2023/12/Desafios-publicos-2024_web-op.jpg"></td>
     <td>Desafíos Públicos 2024"</td>
-    <td><a href="https://anid.cl/concursos/desafios-publicos-2024/">enlace</a></td>
+    <td><a class="btn__icon-link" href="https://anid.cl/concursos/desafios-publicos-2024/"><v-icon>mdi-link</v-icon></a></td>
 </tr>
 <tr>
     <td>10-10-23</td>
     <td><img src="https://anid.cl/wp-content/uploads/2023/12/EQUIPAMIENTO-MEDIANO-2024_web_op.jpg"></td>
     <td>Concurso de Equipamiento Científico y Tecnológico Mediano 2024"</td>
-    <td><a href="https://anid.cl/concursos/concurso-de-equipamiento-cientifico-y-tecnologico-mediano-2024/">enlace</a></td>
+    <td><a class="btn__icon-link" href="https://anid.cl/concursos/concurso-de-equipamiento-cientifico-y-tecnologico-mediano-2024/"><v-icon>mdi-link</v-icon></a></td>
 </tr>
 <tr>
     <td>10-10-23</td>
     <td><img src="https://anid.cl/wp-content/uploads/2023/12/fondecyt-iniciacion-2025_web_op.jpg"></td>
     <td>Concurso de Proyectos Fondecyt de Iniciación en Investigación 2025"</td>
-    <td><a href="https://anid.cl/concursos/concurso-de-proyectos-fondecyt-de-iniciacion-en-investigacion-2025/">enlace</a></td>
+    <td><a class="btn__icon-link" href="https://anid.cl/concursos/concurso-de-proyectos-fondecyt-de-iniciacion-en-investigacion-2025/"><v-icon>mdi-link</v-icon></a></td>
 </tr>
 <tr>
     <td>10-10-23</td>
     <td><img src="https://anid.cl/wp-content/uploads/2023/12/fonis-2024_web_op.jpg"></td>
     <td>Proyectos de Investigación y Desarrollo en Salud (FONIS) 2024"</td>
-    <td><a href="https://anid.cl/concursos/proyectos-de-investigacion-y-desarrollo-en-salud-fonis-2024/">enlace</a></td>
+    <td><a class="btn__icon-link" href="https://anid.cl/concursos/proyectos-de-investigacion-y-desarrollo-en-salud-fonis-2024/"><v-icon>mdi-link</v-icon></a></td>
 </tr>
 
           </tbody>
@@ -144,18 +154,20 @@
             v-for="(concurso, index) in filteredConcursos"
             :key="index"
           >
-            <v-list-item-content>
-              <v-list-item-title>{{ concurso.nombre }}</v-list-item-title>
-            </v-list-item-content>
+            <div class="item__name">{{ concurso.nombre }}</div>
+
             <!-- Botones de agregar y detalles con íconos -->
-            <v-list-item-action>
-              <v-btn icon @click="seleccionarConcurso(concurso)">
-                <v-icon>mdi-plus</v-icon> <!-- Icono de agregar -->
-              </v-btn>
-              <v-btn icon @click="mostrarDetalleConcurso(concurso)">
-                <v-icon>mdi-information</v-icon> <!-- Icono de detalles -->
-              </v-btn>
-            </v-list-item-action>
+            
+            <v-btn class="btn__icon parche-i" icon @click="mostrarDetalleConcurso(concurso)">
+              i
+            </v-btn>
+            <v-btn class="btn__icon-ok" icon @click="seleccionarConcurso(concurso)">
+              <v-icon>mdi-plus</v-icon> <!-- Icono de agregar -->
+            </v-btn>
+            
+
+
+
           </v-list-item>
         </v-list>
       </div>
@@ -185,6 +197,8 @@ export default {
       mostrarTodos: false, // Mostrar "Todos los Concursos" por defecto
       mostrarMis: true, // Estado para mostrar "Mis Concursos"
       mostrarHist: false, // Estado para mostrar "Mis Concursos"
+      snackbar: false, // Controla la visibilidad del snackbar
+      snackbarMessage: '', // Mensaje del snackbar
       searchQuery: "", // Valor para el input de búsqueda
       concursoSeleccionado: null, // Almacena el concurso seleccionado para cargar el componente dinámico
       dialog: false, // Controla la visibilidad del diálogo
@@ -228,6 +242,10 @@ export default {
         this.misConcursos.push(concurso);
         // Remover de "Todos los Concursos"
         this.todosConcursos = this.todosConcursos.filter(c => c !== concurso);
+
+        this.snackbarMessage = `${concurso.nombre} ha sido agregado a Mis Postulaciones`;
+        this.snackbar = true;
+
       }
     },
     eliminarConcurso(concurso) {
@@ -243,11 +261,12 @@ export default {
       const top = (screen.height / 2) - (popupHeight / 2);
 
       window.open(
-        concurso.enlace,  // Abre el enlace del concurso seleccionado
+        concurso.link,
         'ConcursoPopup', 
         `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable,scrollbars`
       );
     }
+
   },
 
 };
@@ -257,8 +276,67 @@ export default {
 .v-btn {
   margin: 5px;
 }
-.v-list-item__underlay{
-  display:flex;
 
+.v-list-item{
+  border-bottom: 1px solid #7f7f7f;
+  
+
+  /* border: 1px darkblue solid; */
+  height: 100%; 
+}
+
+.item__name{
+  display: flex;
+  /* border: 1px darkblue solid; */
+  width: 80%;
+  line-height: 93%;
+  align-items: center;
+}
+
+
+.btn__icon-link{
+  
+  font-size: 20px;
+  width: 30px!important;
+  height: 30px!important;
+  box-shadow: none;
+  padding:4px 0;
+  background-color: #999999;
+  color: #fff;
+}
+
+
+.btn__icon--eye,
+.btn__icon{
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  box-shadow: none;
+  background-color: #999999;
+  color: #fff;
+}
+
+.btn__icon-ok{
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  box-shadow: none;
+  background-color: #4caf50;
+  color: #fff;
+  
+}
+
+.btn__icon--delete{
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  box-shadow: none;
+  background-color: #fb3b3b;
+  color: #fff;
+  
+}
+
+.parche-i{
+  text-transform: lowercase
 }
 </style>
