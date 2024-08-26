@@ -1,6 +1,4 @@
 <template>
-  <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
-
   <v-container>
     <div class="area-v2">
       <!-- Menú simple con enlaces -->
@@ -68,23 +66,20 @@
         <!-- Botón para regresar a la lista de todos los concursos -->
         <v-btn @click="mostrarTodosConcursos">Volver a Todos los Concursos</v-btn>
 
-        <!-- Cargar componente dinámico -->
-        <component v-if="concursoSeleccionado" :is="concursoSeleccionado.component"></component>
+        <!-- Diálogo para mostrar el iframe con detalles del concurso -->
+        <v-dialog v-model="dialog" width="800">
+          <v-card>
+            <v-card-title class="headline">Detalles del Concurso</v-card-title>
+            <v-card-text>
+              <iframe :src="concursoSeleccionado.link" width="100%" height="500px" frameborder="0"></iframe>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+
       </div>
-
-      <!-- Diálogo para mostrar el iframe con detalles del concurso -->
-      <v-dialog v-model="dialog" width="800">
-        <v-card>
-          <v-card-title class="headline">Detalles del Concurso</v-card-title>
-          <v-card-text>
-            <iframe :src="concursoSeleccionado.link" width="100%" height="500px" frameborder="0"></iframe>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-
     </div>
   </v-container>
 </template>
@@ -92,7 +87,6 @@
 <script>
 // Importa el archivo JSON desde la carpeta data
 import concursosData from "@/data/concursos.json";
-
 export default {
   data() {
     return {
@@ -104,7 +98,8 @@ export default {
       // Lista de todos los concursos cargados desde el JSON
       todosConcursos: concursosData, 
       // Lista de concursos seleccionados (Mis Concursos)
-      misConcursos: []
+      misConcursos: [],
+
     };
   },
   computed: {
@@ -141,24 +136,19 @@ export default {
       this.todosConcursos.push(concurso);
     },
     mostrarDetalleConcurso(concurso) {
-      this.concursoSeleccionado = concurso; // Selecciona el concurso
-      this.dialog = true; // Abre el diálogo para mostrar el iframe
+      const popupWidth = 800;
+      const popupHeight = 600;
+      const left = (screen.width / 2) - (popupWidth / 2);
+      const top = (screen.height / 2) - (popupHeight / 2);
+
+      window.open(
+        concurso.link,  // Abre el enlace del concurso seleccionado
+        'ConcursoPopup', 
+        `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable,scrollbars`
+      );
     }
   },
-  components: {
-    ConcursoBecaDoctorado: {
-      template: '<div><h2>Detalles de BECA DE DOCTORADO NACIONAL</h2><p>Información completa del concurso de BECA DE DOCTORADO NACIONAL.</p></div>'
-    },
-    ConcursoNucleosNaturales: {
-      template: '<div><h2>Detalles del Concurso Núcleos Ciencias Naturales y Exactas 2023</h2><p>Información completa del concurso Núcleos.</p></div>'
-    },
-    ConcursoStartupCiencia: {
-      template: '<div><h2>Detalles del Concurso Startup Ciencia, Año 2024</h2><p>Información completa del concurso Startup Ciencia.</p></div>'
-    },
-    FondecytIniciacion: {
-      template: '<div><h2>Detalles de Fondecyt de Iniciación en Investigación 2025</h2><p>Información completa del concurso Fondecyt.</p></div>'
-    }
-  }
+
 };
 </script>
 
@@ -167,8 +157,8 @@ export default {
   margin: 5px;
 }
 
-  iframe{
-    heigth: 500px;
-  }
+iframe {
+  height: 500px;
+}
 
 </style>
