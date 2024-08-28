@@ -1727,13 +1727,24 @@ v-list-item-group .v-list-item{
   {
     margin-top: 64px;
   }
-
+  .footer{  
+    padding-left: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 
 /* sm */
 @media (max-width: 960px) {
 
+
+  .v-navigation-drawer{
+    padding-top: 0;
+  }
+
+  .footer{  
+    padding-left: 0;
+  }
 
   .item__name{width: 100%;}
   
