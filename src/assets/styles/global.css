@@ -1527,6 +1527,9 @@ v-app-bar */
   color: #fff;
   z-index: 2000;
   /* border: 5px solid hwb(240 0% 0%); */
+  padding-top: 24px;
+  padding-bottom: 18px;
+  padding-left: 250px;
   /* border: 5px solid hwb(240 0% 0%); */
   flex-direction: row;
   justify-content: space-between;
@@ -1537,7 +1540,7 @@ v-app-bar */
   /* border: 5px solid hwb(240 0% 0%); */
   width: fit-content;
   img{
-    width: 200px;
+    width: 100px;
   }
 }
   
