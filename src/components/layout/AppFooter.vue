@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import logoAnid from '../../assets/images/logo-anid.png';
+import logoAnid from '../../assets/images/logo-anid.svg';
 export default {
   name: "AppFooter",
   data() {
