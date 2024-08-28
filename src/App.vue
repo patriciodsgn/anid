@@ -174,8 +174,9 @@
       <v-app-bar-nav-icon class="header__ham" v-if="shouldShowDrawer && !isLgAndUp" @click="drawer = !drawer" />
 
       <v-app-bar-title class="header__logo">
-        <img  :src="logoAnid2" alt="Logo ANID">
-        <img src="https://idd.cl/d/anid/assets/img/logo-plataforma.png" alt="">
+        <img  :src="logoAnid1"  class="header__logo-img1" alt="Logo ANID">
+        <img  :src="logoPlataforma1"  class="header__logo-img2" alt="Logo Plataforma">
+        <img  :src="logoPlataforma2"  class="header__logo-img3" alt="Logo Plataforma2">
       </v-app-bar-title>
 
       
@@ -228,7 +229,10 @@ import { useDisplay } from 'vuetify'
 // import AppMenu from '@/components/layout/AppMenu.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 
-import logoAnid2 from '../src/assets/images/logo-anid.png';
+
+import logoAnid1 from '../src/assets/images/logo-anid1.svg';
+import logoPlataforma1 from '../src/assets/images/logo-plataforma1.svg';
+import logoPlataforma2 from '../src/assets/images/logo-plataforma2.svg';
 
 // Estado del drawer
 const drawer = ref(false)

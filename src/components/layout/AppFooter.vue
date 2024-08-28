@@ -3,7 +3,7 @@
     <!-- <v-container class="container"> -->
 
         <div class="footer__logo">
-          <img :src="logoAnid" alt="Logo ANID">
+          <img :src="logoAnid2" alt="Logo ANID">
           <div>Version 0.0.1</div>
         </div>
 
@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import logoAnid from '../../assets/images/logo-anid.svg';
+import logoAnid2 from '../../assets/images/logo-anid2.svg';
 export default {
   name: "AppFooter",
   data() {
     return {
-      logoAnid,
+      logoAnid2,
     };
   },
 };
