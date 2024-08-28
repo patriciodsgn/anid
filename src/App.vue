@@ -1,6 +1,38 @@
 <template>
   <v-app id="inspire">
     <!-- Mostrar el drawer solo si no estamos en la ruta raíz (/) -->
+    <!-- Botón estilizado de accesibilidad -->
+    
+    
+  
+    <div @click="closePanelIfClickedOutside">
+    <!-- Botón de accesibilidad -->
+      <div class="accessibility-btn" @click.stop="togglePanel">
+        <img :src="iconWheelchair" alt="Wheelchair Icon" />
+      </div>
+
+      <!-- Panel de accesibilidad -->
+      <div v-if="isUsabiVisible" ref="accessibilityPanel" class="panel_usa">
+        <div>
+          <v-icon left>mdi-plus</v-icon>
+          <span>Aumentar texto</span>
+        </div>
+        <div>
+          <v-icon left>mdi-minus</v-icon>
+          <span>Disminuir texto</span>
+        </div>
+        <div>
+          <v-icon left>mdi-minus</v-icon>
+          <span>Disminuir texto</span>
+        </div>
+
+
+        <a>+ button</a> <br>
+        <a>- button</a> <br>
+        <a>🌗 button</a> <br>
+        <a>🖌️ button</a> <br>
+      </div>
+    </div>
 
 
 
@@ -186,6 +218,7 @@
 <script setup>
 
 import profilePato from "./assets/images/profile-pato.png";
+import iconWheelchair from './assets/images/icon-wheelchair.svg';
 
 import { ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
@@ -196,6 +229,11 @@ import AppFooter from '@/components/layout/AppFooter.vue'
 
 // Estado del drawer
 const drawer = ref(false)
+
+const isUsabiVisible = ref(false)
+const togglePanel = () => {
+  isUsabiVisible.value = !isUsabiVisible.value
+}
 
 // Verificar si la pantalla es grande
 const { lgAndUp } = useDisplay()
@@ -248,6 +286,12 @@ const isActiveRole2b = computed(() =>
 );
 
 
+
+
+
+
+
+
 </script>
 
 <style scoped>
@@ -255,45 +299,5 @@ const isActiveRole2b = computed(() =>
 
 
 
-/* 
 
-.v-list-item{
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  position: relative;
-  border: 2px solid #0f0;
-}
-
-.v-list-item__content{
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  position: relative;
-  border: 1px solid #0f0;
-}
-
-.v-icon{
-  flex-wrap: wrap;
-  position: relative;
-  border: 1px solid #f00;
-  width: fit-content;
-  display: inline;
-}
-
-.v-list-item-title{
-  position: relative;
-  border: 1px solid #ff0;
-  width: fit-content;
-}
-
-
-.v-list-item__content{
-  display: flex;
-  flex-direction: row;
-}
-
-class="d-flex align-center" */
 </style>
