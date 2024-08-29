@@ -12,9 +12,9 @@
       <br>
       <!-- Menú simple con enlaces -->
       <div class="menu-postulaciones">
-        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarPostulacionesActivas">Postulaciones Activas</a>
-        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarHistorialPostulaciones">Historial Postulaciones</a> 
         <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
+        <a class="menu-postulaciones__btn2" href="#" @click.prevent="mostrarPostulacionesActivas">Mis Postulaciones Activas</a>
+        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarHistorialPostulaciones">Mi Historial Postulaciones</a> 
       </div>
 
       <!-- Snackbar para mostrar la notificación -->

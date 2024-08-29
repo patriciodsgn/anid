@@ -1179,6 +1179,13 @@ h2 {
     text-decoration: none;
     padding: 12px;
   }
+  .menu-postulaciones__btn{
+    background-color: #4caf50;
+    color: #fff;
+    width: 50%;
+    text-decoration: none;
+    padding: 12px;
+  }
 
   .menu-postulaciones__btn:hover{
     filter: brightness(0.8);
