@@ -3,6 +3,7 @@
     <v-container>
       <div class="area-v2">
       <h2>Datos Principales Page</h2>
+      <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi id est laborum.</p>
       <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
         <v-row>
           <v-col cols="12" sm="8">

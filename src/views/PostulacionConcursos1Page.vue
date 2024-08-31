@@ -2,20 +2,24 @@
   <v-container>
     <div class="area-v2">
       <h2 class="mb-4">Postulación Concursos</h2>
-      <br>
-      <p><b>¡Bienvenido a tu espacio de gestión de concursos!</b></p>
-      <p>Aquí podrás postularte, ver tu historial y explorar nuevos concursos.</p>
-      <br>
-      <p> <b>Postulaciones Activas</b>: Gestiona las postulaciones en las que estás participando actualmente.</p>
-      <p> <b>Historial de Postulaciones</b>: Revisa tus postulaciones anteriores y su estado.</p>
-      <p> <b>Todos los Concursos</b>: Descubre y aplica a nuevos concursos disponibles.</p>
-      <br>
-      <!-- Menú simple con enlaces -->
-      <div class="menu-postulaciones">
-        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
-        <a class="menu-postulaciones__btn2" href="#" @click.prevent="mostrarPostulacionesActivas">Mis Postulaciones Activas</a>
-        <a class="menu-postulaciones__btn" href="#" @click.prevent="mostrarHistorialPostulaciones">Mi Historial Postulaciones</a> 
+      
+      <div class="menu-line">
+        <a class="menu-line__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
+        <a class="menu-line__btn" href="#" @click.prevent="mostrarPostulacionesActivas">Mis Postulaciones Activas</a>
+        <a class="menu-line__btn" href="#" @click.prevent="mostrarHistorialPostulaciones">Mi Historial Postulaciones</a> 
       </div>
+      
+      <div class="intro">
+        
+        <p><b>¡Bienvenido a tu espacio de gestión de concursos!</b></p>
+        <p>Aquí podrás postularte, ver tu historial y explorar nuevos concursos.</p>
+        <br>
+        <p> <b>Postulaciones Activas</b>: Gestiona las postulaciones en las que estás participando actualmente.</p>
+        <p> <b>Historial de Postulaciones</b>: Revisa tus postulaciones anteriores y su estado.</p>
+        <p> <b>Todos los Concursos</b>: Descubre y aplica a nuevos concursos disponibles.</p>
+        
+      </div>
+      <!-- Menú simple con enlaces -->
 
       <!-- Snackbar para mostrar la notificación -->
       <v-snackbar v-model="snackbar" :timeout="3000" top right>

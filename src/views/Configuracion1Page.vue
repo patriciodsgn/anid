@@ -4,18 +4,21 @@
       <div class="area-v2">
 
       <h2>Configuración de Cuenta</h2>
+
+      <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi id est laborum.</p>
+      
       <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
         <v-row>
           <v-col cols="12" sm="6">
             <v-text-field
               v-model="formData.username"
-              :rules="[v => !!v || 'El nombre de usuario es requerido']"
               label="Nombre de Usuario"
               variant="outlined"
               required
             ></v-text-field>
           </v-col>
-
+        </v-row>
+        <v-row>
           <v-col cols="12" sm="6">
             <v-text-field
               v-model="formData.email"
@@ -25,7 +28,41 @@
               required
             ></v-text-field>
           </v-col>
-
+        </v-row>
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="formData.email2"
+              :rules="[v => /.+@.+\..+/.test(v) || 'Email inválido']"
+              label="Email Respaldo"
+              variant="outlined"
+              required
+            ></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="formData.email3"
+              :rules="[v => /.+@.+\..+/.test(v) || 'Email inválido']"
+              label="Email Respaldo"
+              variant="outlined"
+              required
+            ></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+        <v-col cols="12" sm="6">
+          <v-text-field
+            v-model="formData.phone"
+            :rules="[v => /^(\+56)?(\s?9\d{8})$/.test(v) || 'Teléfono inválido']"
+            label="Teléfono de Contacto"
+            variant="outlined"
+            required
+          ></v-text-field>
+        </v-col>
+      </v-row>
+        <v-row>
           <v-col cols="12" sm="6">
             <v-text-field
               v-model="formData.password"
@@ -77,16 +114,10 @@
             ></v-switch>
           </v-col>
 
-          <v-col cols="12" sm="6">
-            <v-switch
-              v-model="formData.twoFactorAuth"
-              label="Habilitar Autenticación de Dos Factores"
-              inset
-              variant="outlined"
-            ></v-switch>
-          </v-col>
 
-          <v-col cols="12">
+        </v-row>
+        <v-row>
+          <v-col cols="12" sm="6" offset="2">
             <v-btn class="btn-primary-v1" type="submit" :disabled="!valid">
               Guardar Configuración
             </v-btn>
@@ -105,10 +136,13 @@ export default {
     return {
       valid: false,
       formData: {
-        username: 'patricio_garr',
-        email: 'patricio@usash.cl',
+        username: 'patricio_andres',
+        email: 'patricio@usach.cl',
+        email2: 'patricio@gmail.cl',
+        email3: 'patricio@outlook.cl',
+        phone: '+56988650377',
         password: '******',
-        confirmPassword: '',
+        confirmPassword: '******',
         preferredLanguage: 'Español',
         theme: 'Claro',
         notifications: true,

@@ -1025,11 +1025,7 @@ background: rgba(0, 0, 0, 0.1);
   background-color: #f2f2f2;
 }
 
-.area-v2{
-  margin: 5%;
-  background-color: #fff;
 
-}
 
 
 
@@ -1050,12 +1046,16 @@ background: rgba(0, 0, 0, 0.1);
 
 
 .v-field{
-
   border-radius: 0px !important ;
 }
+
 .v-field__field{
-  /* border: 2px solid #205ec9; */
   border: none;
+}
+v-simple-table{
+  border: 2px solid #205;
+  width: 1000px;
+
 }
 
 .blue{
@@ -1072,11 +1072,11 @@ background: rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  margin-top: 50px;
-  margin-bottom: 80px;
   font-family: 'Roboto Slab', serif; /* Aplica la fuente correcta */
   font-size: 32px;
   line-height: 150%;
+  padding: 8px 0;
+  margin-bottom: 16px;
   border-bottom: 1px solid #949494;
 }
 
@@ -1254,14 +1254,26 @@ v-theme--light */
   background-color: #0f69c4;
   color: #ffff;
   box-shadow: none;
+  margin: 0!important;
+  padding: 20px !important;
+  height: 55px !important;
+  width: 100%;
 }
 
 .btn-primary-v1:hover{
-  display: block;
-  width: fit-content;
   background-color: #003b8d;
   color: #ffff;
   box-shadow: none;
+}
+
+
+
+.v-selection-control--dirty
+{
+ /* border: 1px solid #000!important; */
+  .v-switch__track{
+    background-color: #0f69c4!important;opacity: 1;
+  }
 }
 
 
@@ -1302,34 +1314,29 @@ v-theme--light */
   position: relative;
 }
 
-.v-simple-table td{
-  width: 100%!important;
-  border: 1px solid #000 !important;
-}
+
 
 .btn-success-v1{
-  display: block;
-  width: fit-content;
-  background-color: #4caf50;
-  color: #ffff;
-  box-shadow: none;
-}
-
-.btn-success-v1:hover{
   display: block;
   width: fit-content;
   background-color: #388e3c;
   color: #ffff;
   box-shadow: none;
+  margin: 0!important;
+  padding: 20px !important;
+  height: 55px !important;
+  width: 100%;
 }
 
+.btn-success-v1:hover{
+  background-color: #4caf50;
+}
 
-
-
-
-
-
-
+.full-width {
+  position: relative;
+  width: 100%;
+  border: 1px solid #000;
+}
 
 
 
@@ -1353,6 +1360,7 @@ v-theme--light */
 
 
 .area-v3{
+  position: relative;
   border: 2px solid #e6e6e6;
   padding: 10% 5%;
   background-color: #f2f2f2;
@@ -1361,11 +1369,13 @@ v-theme--light */
 
 
 .area-v2{
+  position: relative;
   border: 2px solid #e6e6e6;
-  padding: 16px;
+  padding: 60px 48px;
+  margin: 5%;
+  background-color: #fff;
+
 }
-
-
 
 .logo-main{
   display: flex;
@@ -1693,7 +1703,27 @@ v-list-item-group .v-list-item{
 }
 
 
+.intro{
+  background: #EFF7FF;
+  border: 1px solid #A1A1A1;
+  border-radius: 6px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 12px 18px;
+  width: 100%;
+}
 
+
+
+.menu-line__btn{
+    color: #cbcbcb;
+    border-bottom: 4px solid #CECECE;
+    margin-left: 2px;
+    padding: 4px 32px;
+    text-align: center;
+    display: block;
+    width: 100%!important;
+}
 /* @media Media queries */
 
 /* xl */
