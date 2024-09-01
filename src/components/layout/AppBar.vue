@@ -2,9 +2,9 @@
   <v-app-bar class="v-app-bar">
     <v-app-bar-nav-icon v-if="shouldShowDrawer && !isLgAndUp" @click="drawer = !drawer" />
 
-    <v-app-bar-title class="logo-main">
+    <div class="logo-main">s
       <img :src="logoAnid" alt="ANID Logo" />
-    </v-app-bar-title>
+    </div>
 
     <div v-if="activeUser" class="block-user-v1">
       <img class="block-user-v1--img" :src="activeUser.profileImg" :alt="activeUser.name" />
@@ -62,8 +62,13 @@ export default {
 </script>
 
 <style scoped>
+.logo-main  {
+  border: 1px solid #ff0!important;
+
+}
 .logo-main img {
   height: 40px;
+  margin-left: 24px;
 }
 
 .block-user-v1 {

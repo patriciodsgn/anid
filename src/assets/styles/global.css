@@ -1052,11 +1052,35 @@ background: rgba(0, 0, 0, 0.1);
 .v-field__field{
   border: none;
 }
-v-simple-table{
-  border: 2px solid #205;
-  width: 1000px;
 
+.line-data-h{
+  display: flex;
+  margin-bottom: 20px;
 }
+
+.line-data{
+  /* border: 1px solid #00f; */
+  display: flex;
+}
+
+.line-data > div{
+  /* border: 1px solid #f00; */
+}
+
+.line-data > div.w10{width: 10%;}
+.line-data > div.w20{width: 20%;}
+.line-data > div.w30{width: 30%;}
+.line-data > div.w40{width: 40%;}
+.line-data > div.w50{width: 50%;}
+.line-data > div.w60{width: 60%;}
+.line-data > div.w70{width: 70%;}
+.line-data > div.w80{width: 80%;}
+.line-data > div.w90{width: 90%;}
+.line-data > div.w100{width: 100%;}
+
+
+
+
 
 .blue{
   background-color: #205ec9;
@@ -1382,9 +1406,10 @@ v-theme--light */
   flex-direction: row;
   position: relative;
   width: fit-content;
+  margin-left: 24px;
   gap: 0;
   height: 50px;
-  /* border: 4px solid #00f; */
+  border: 4px solid #00f;
   align-content: center;
 }
 
@@ -1431,6 +1456,7 @@ v-theme--light */
   left: 0!important;
   z-index: 500!important;
   /* border: 11px solid #00f; */
+  padding-left: 24px;
   /* border: 11px solid hsl(0, 100%, 50%);   */
 }
 
@@ -1783,6 +1809,25 @@ v-list-item-group .v-list-item{
     padding-left: 24px;
     padding-bottom: 24px;
   }
+
+
+  .line-data{
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .line-data > div.w10,
+  .line-data > div.w20,
+  .line-data > div.w30,
+  .line-data > div.w40,
+  .line-data > div.w50,
+  .line-data > div.w60,
+  .line-data > div.w70,
+  .line-data > div.w80,
+  .line-data > div.w90,
+  .line-data > div.w100{width: 100%;}
+
+
+
 }
 
 

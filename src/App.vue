@@ -22,15 +22,11 @@
           <span>Disminuir texto</span>
         </div>
         <div>
-          <v-icon left>mdi-minus</v-icon>
+          <v-icon left>mdi-brigtness</v-icon>
           <span>Disminuir texto</span>
         </div>
 
 
-        <a>+ button</a> <br>
-        <a>- button</a> <br>
-        <a>🌗 button</a> <br>
-        <a>🖌️ button</a> <br>
       </div>
     </div>
 
@@ -261,6 +257,7 @@ watch([isLgAndUp, shouldShowDrawer], ([isLgAndUpVal, shouldShowDrawerVal]) => {
     drawer.value = true
   }
 }, { immediate: true })
+
 
 
 

@@ -4,7 +4,7 @@
 
         <div class="footer__logo">
           <img :src="logoAnid2" alt="Logo ANID">
-          <div>Version 0.0.1</div>
+          <div>Version 0.0.4</div>
         </div>
 
         <div class="footer__menu">
@@ -13,6 +13,7 @@
           <v-btn class="link-alt" text href="https://anid.cl/">ANID.cl</v-btn>
         </div>
       
+
     <!-- </v-container> -->
   </v-footer>
 </template>
