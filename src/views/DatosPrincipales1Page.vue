@@ -1,9 +1,22 @@
 <template>
-  <div>
-    <v-container>
-      <div class="area-v2">
+  <v-container>
+
+    <v-row>
+      <v-col
+      cols="12" offset="0"
+      xs="10" offset-xs="1"
+      sm="10" offset-sm="1"
+      md="10" offset-md="1"
+      lg="10" offset-lg="1"
+      xl="6" offset-xl="3"
+      class="page2">
+
+
+
       <h2>Datos Principales Page</h2>
+      <br>
       <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi id est laborum.</p>
+      <br>
       <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
         <v-row>
           <v-col cols="12" sm="8">
@@ -154,9 +167,13 @@
           </v-col>
         </v-row>
       </v-form>
-      </div>
+      
+
+
+      </v-col>
+      </v-row>
+
     </v-container>
-  </div>
 </template>
 
 <script>

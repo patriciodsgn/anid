@@ -1,6 +1,18 @@
 <template>
   <v-container>
-    <div class="area-v2">
+
+    <v-row>
+      <v-col
+      cols="12" offset="0"
+      xs="10" offset-xs="1"
+      sm="10" offset-sm="1"
+      md="10" offset-md="1"
+      lg="10" offset-lg="1"
+      xl="6" offset-xl="3"
+      class="page2">
+
+
+
       <h2 class="mb-4">Postulación Concursos</h2>
       
       <div class="menu-line">
@@ -74,8 +86,6 @@
         </v-dialog>
 
       </div>
-
-
 
 
 
@@ -196,7 +206,11 @@
 
 
       
-    </div>
+
+
+      </v-col>
+    </v-row>
+
   </v-container>
 </template>
 

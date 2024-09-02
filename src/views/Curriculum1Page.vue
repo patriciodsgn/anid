@@ -1,17 +1,25 @@
 <template>
   <v-container>
-    <div class="area-v2">
+
+    <v-row>
+      <v-col
+      cols="12" offset="0"
+      xs="10" offset-xs="1"
+      sm="10" offset-sm="1"
+      md="10" offset-md="1"
+      lg="10" offset-lg="1"
+      xl="6" offset-xl="3"
+      class="page2">
+
       <h2 class="mb-4">Curriculum</h2>
 
       <!-- Botones de navegación -->
-      <v-row>
-        <v-col cols="12" sm="6">
+      
+        <div class="menu-line">
           <a class="menu-line__btn" href="#">Curriculum ANID</a>
-        </v-col>
-        <v-col cols="12" sm="6">
           <a class="menu-line__btn" href="https://investigadores.anid.cl/">Ir a Portal del Investigador</a>
-        </v-col>
-      </v-row>
+        </div>
+      
       <br>
 
       <!-- Descripción -->
@@ -88,6 +96,7 @@
             <v-card-title>3. Productos Científicos</v-card-title>
             <v-card-text>
               <p>Se solicita ingresar 3 listas de productos científicos relevantes.</p>
+              <br>
               <h4>3.1 Productos Relevantes Relacionados con el Proyecto de Núcleo</h4>
               <br>
               <!-- <div class="line-data line-data-h">
@@ -145,15 +154,15 @@
             <v-card-title>4. Financiamiento de Investigación en los últimos 5 años</v-card-title>
 
             <v-card-text> 
-              <div class="line-data">
+              <!-- <div class="line-data">
                 <div class="w40">Proyecto</div>
                 <div class="w40">Financiación</div>
                 <div class="w20">Año</div>
-              </div>
+              </div> -->
               <div class="line-data">
-                <div class="w40"><v-text-field variant="outlined" label="Proyecto"></v-text-field></div>
+                <div class="w50"><v-text-field variant="outlined" label="Proyecto"></v-text-field></div>
                 <div class="w40"><v-text-field variant="outlined" label="Financiación"></v-text-field></div>
-                <div class="w20"><v-text-field variant="outlined" label="Año"></v-text-field></div>
+                <div class="w10"><v-text-field variant="outlined" label="Año"></v-text-field></div>
               </div>
             </v-card-text>
 
@@ -175,17 +184,18 @@
             <v-card-title>5. Indicadores</v-card-title>
             <v-card-text>
               <h4>5.1 Productividad Científica</h4>
-              <div class="line-data">
+              <br>
+              <!-- <div class="line-data">
                 <div class="w70">Indicador</div>
                 <div class="w30">Cantidad</div>
+              </div> -->
+              <div class="line-data">
+                <div class="w90 borderx">Índice h total de Google Scholar</div>
+                <div class="w10"><v-text-field variant="outlined"  label="Num"></v-text-field></div>
               </div>
               <div class="line-data">
-                <div class="w70 border">Índice h total de Google Scholar</div>
-                <div class="w30"><v-text-field variant="outlined"  label="Num"></v-text-field></div>
-              </div>
-              <div class="line-data">
-                <div class="w70 border">Total de publicaciones en los últimos 5 años</div>
-                <div class="w30"><v-text-field variant="outlined"  label="Num"></v-text-field></div>
+                <div class="w90 borderx">Total de publicaciones en los últimos 5 años</div>
+                <div class="w10"><v-text-field variant="outlined"  label="Num"></v-text-field></div>
               </div>
 
               <v-row>
@@ -209,7 +219,9 @@
       </v-row>
       <br>
 
-    </div>
+    
+  </v-col>
+</v-row>
   </v-container>
 </template>
 
@@ -238,93 +250,6 @@ export default {
 </script>
 
 <style scoped>
-td, th {
-  padding: 0;
-  text-align: left;
-  /* border: 1px solid #000; */
-}
-
-td {
-  padding: 8px!important;
-}
-
-v-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-thead {
-  background-color: #f5f5f5;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.btn-primary-v1 {
-  background-color: #1976d2;
-  color: white;
-}
-
-.btn-success-v1 {
-  background-color: #4caf50;
-  color: white;
-}
-
-.card-v1 {
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
-td, th {
-  padding: 0;
-  text-align: left;
-  /* border: 1px solid #000; */
-}
-
-td{
-  /* border: 2px solid #0f0; */
-  padding: 0!important;
-  margin: 0!important;
-  height: 70px!important;
-  left: 0!important;
-  
-}
-td div{
-  /* border: 2px solid #0f0; */
-  padding: 0!important;
-  margin: 0!important;
-  margin-top: 10px!important;
-  height: 70px!important;
-  width: 100%!important;
-  left: 0!important;
-  
-}
-
-thead {
-  background-color: #f5f5f5;
-  border: none!important;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-
-tbody tr:nth-child(even) {
-  background-color: #fff;
-}
-
-th{
-  border: none!important;
-  margin-bottom: 20px!important;
-}
-td{
-  border: none!important;
-}
 
 
 

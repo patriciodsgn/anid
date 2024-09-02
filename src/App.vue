@@ -5,28 +5,24 @@
     
     
   
-    <div @click="closePanelIfClickedOutside">
     <!-- Botón de accesibilidad -->
+    <div @click="closePanelIfClickedOutside">
       <div class="accessibility-btn" @click.stop="togglePanel">
         <img :src="iconWheelchair" alt="Wheelchair Icon" />
       </div>
-
-      <!-- Panel de accesibilidad -->
       <div v-if="isUsabiVisible" ref="accessibilityPanel" class="panel_usa">
-        <div>
+        <div class="btn-primary-v1">
           <v-icon left>mdi-plus</v-icon>
           <span>Aumentar texto</span>
         </div>
-        <div>
+        <div class="btn-primary-v1">
           <v-icon left>mdi-minus</v-icon>
           <span>Disminuir texto</span>
         </div>
-        <div>
-          <v-icon left>mdi-brigtness</v-icon>
-          <span>Disminuir texto</span>
+        <div class="btn-primary-v1">
+          <v-icon left>mdi-contrast-box</v-icon>
+          <span>Contraste</span>
         </div>
-
-
       </div>
     </div>
 
@@ -175,6 +171,12 @@
         <img  :src="logoPlataforma2"  class="header__logo-img3" alt="Logo Plataforma2">
       </v-app-bar-title>
 
+      <div v-if="isLogin">
+        <v-btn>
+          <v-icon left>mdi-earth</v-icon>
+          <span>EN</span>
+        </v-btn>
+      </div>
       
       <div v-if="isActiveRole1" class="user">
         <img class="user__pic" :src=profilePato alt="">
@@ -262,6 +264,10 @@ watch([isLgAndUp, shouldShowDrawer], ([isLgAndUpVal, shouldShowDrawerVal]) => {
 
 
 // const isRootPath = computed(() => route.path === '/');
+const isLogin = computed(() => 
+  route.path === '/'
+);
+
 const isActiveRole1 = computed(() => 
   route.path === '/datos-principales1'
   || route.path === '/curriculum1'
