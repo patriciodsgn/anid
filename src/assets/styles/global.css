@@ -1900,7 +1900,7 @@ v-list-item-group .v-list-item{
 
   .page,
   .page2{
-    border: 13px solid rgb(255, 0, 102)!important;
+    /* border: 13px solid rgb(255, 0, 102)!important; */
   }
 
   
@@ -1913,7 +1913,7 @@ v-list-item-group .v-list-item{
 
   .page,
   .page2{
-    border: 13px solid rgb(170, 0, 255)!important;
+    /* border: 13px solid rgb(170, 0, 255)!important; */
   }
 }
 
@@ -1983,7 +1983,7 @@ v-list-item-group .v-list-item{
   }
   .page,
   .page2{
-    border: 13px solid #1ba650!important;
+    /* border: 13px solid #1ba650!important; */
   }
 
 
@@ -2041,7 +2041,7 @@ v-list-item-group .v-list-item{
 
   .page,
   .page2{
-    border: 13px solid rgb(255, 255, 0)!important;
+    /* border: 13px solid rgb(255, 255, 0)!important; */
   }
 
 }
@@ -2051,7 +2051,7 @@ v-list-item-group .v-list-item{
 
   .page,
   .page2{
-    border: 13px solid rgb(255, 174, 0)!important;
+    /* border: 13px solid rgb(255, 174, 0)!important; */
   }
 
   .footer__menu{
