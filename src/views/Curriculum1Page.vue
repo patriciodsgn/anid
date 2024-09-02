@@ -16,7 +16,7 @@
       <!-- Botones de navegación -->
       
         <div class="menu-line">
-          <a class="menu-line__btn" href="#">Curriculum ANID</a>
+          <a class="menu-line__btn menu-line__btn--active" href="#">Curriculum ANID</a>
           <a class="menu-line__btn" href="https://investigadores.anid.cl/">Ir a Portal del Investigador</a>
         </div>
       
@@ -33,9 +33,9 @@
       <!-- Botón de descarga -->
       <v-row>
         <v-col cols="12" sm="10" offset="0" offset-sm="1">
-          <v-btn class="btn-primary-v1" type="submit">
+          <div class="btn-primary-v1" type="submit">
             Descargar Formato ANID
-          </v-btn>
+          </div>
         </v-col>
       </v-row>
       <br><br>
@@ -80,7 +80,7 @@
             </div>
             <v-row>
               <v-col cols="10" offset="2"  sm="4"  offset-sm="8">
-                <v-btn class="btn-primary-v1">+ AGREGAR</v-btn>
+                <div class="btn-primary-v1">+ AGREGAR</div>
               </v-col>
             </v-row>
           </v-card>
@@ -118,7 +118,7 @@
 
               <v-row>
                 <v-col cols="10" offset="2"  sm="4"  offset-sm="8">
-                  <v-btn class="btn-primary-v1">+ AGREGAR</v-btn>
+                  <div class="btn-primary-v1">+ AGREGAR</div>
                 </v-col>
               </v-row>
 
@@ -137,7 +137,7 @@
 
               <v-row>
                 <v-col cols="10" offset="2"  sm="4"  offset-sm="8">
-                  <v-btn class="btn-primary-v1">+ AGREGAR</v-btn>
+                  <div class="btn-primary-v1">+ AGREGAR</div>
                 </v-col>
               </v-row>
               
@@ -164,13 +164,13 @@
                 <div class="w40"><v-text-field variant="outlined" label="Financiación"></v-text-field></div>
                 <div class="w10"><v-text-field variant="outlined" label="Año"></v-text-field></div>
               </div>
+              
+              <v-row>
+                <v-col cols="10" offset="2"  sm="4"  offset-sm="8">
+                  <div class="btn-primary-v1">+ AGREGAR</div>
+                </v-col>
+              </v-row>
             </v-card-text>
-
-            <v-row>
-              <v-col cols="10" offset="2"  sm="4"  offset-sm="8">
-                <v-btn class="btn-primary-v1">+ AGREGAR</v-btn>
-              </v-col>
-            </v-row>
 
           </v-card>
         </v-col>
@@ -200,7 +200,7 @@
 
               <v-row>
                 <v-col cols="10" offset="2"  sm="4"  offset-sm="8">
-                  <v-btn class="btn-primary-v1">+ AGREGAR</v-btn>
+                  <div class="btn-primary-v1">+ AGREGAR</div>
                 </v-col>
               </v-row>
 
@@ -214,7 +214,7 @@
       
       <v-row>
         <v-col cols="12" offset="0"  sm="6"  offset-sm="3">
-          <v-btn class="btn-success-v1">GUARDAR</v-btn>
+          <div class="btn-success-v1">GUARDAR</div>
         </v-col>
       </v-row>
       <br>

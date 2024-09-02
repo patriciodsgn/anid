@@ -17,10 +17,12 @@
       <br>
       <div class="menu-line">
         <a class="menu-line__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
-        <a class="menu-line__btn" href="#" @click.prevent="mostrarPostulacionesActivas">Mis Postulaciones Activas</a>
+        <a class="menu-line__btn menu-line__btn--active" href="#" @click.prevent="mostrarPostulacionesActivas">Mis Postulaciones Activas</a>
         <a class="menu-line__btn" href="#" @click.prevent="mostrarHistorialPostulaciones">Mi Historial Postulaciones</a> 
       </div>
+
       <br>
+      
       <div class="intro">
         
         <p><b>¡Bienvenido a tu espacio de gestión de concursos!</b></p>
@@ -46,15 +48,24 @@
         <br>  
         <h3>Mis Postulaciones</h3>
 
+        <br>
         
-        
+ 
+        <br>
+      
+      
+
+
+
+
+
         <div 
           v-for="(concurso, index) in misConcursos"
           :key="index"
           class="line-data"
         >
-          <div class="w80 borderx">{{ concurso.nombre }}</div>
-          <div class="w20 borderx">
+          <div class="w80 ">{{ concurso.nombre }}</div>
+          <div class="w20 ">
             <v-btn icon class="btn__icon--eye" @click="mostrarDetalleConcurso(concurso)">
               <v-icon>mdi-eye</v-icon> <!-- Icono de ver concurso -->
             </v-btn>
@@ -158,14 +169,56 @@
       <!-- Campo de búsqueda para filtrar los concursos -->
       <div v-if="mostrarTodos">
         <br>  
-        <v-text-field
-          v-model="searchQuery"
-          label="Buscar Concurso"
-          variant="outlined"
-          placeholder="Escribe para buscar..."
-        ></v-text-field>
+
+        <br>
+        <br>
         <br>
         <h3>Todos los Concursos</h3>
+        <br>
+
+
+
+        <div class="block-search">
+          <div class="block-search__col">
+            <small><b>Filtros</b>:</small>
+          </div>
+          <div class="block-search__col">
+            <div class="chipx">2020</div>
+            <div class="chipx chipx--active">2021</div>
+            <div class="chipx">2022</div>
+            <div class="chipx">2023</div>
+            <div class="chipx">2024</div>
+
+          </div>
+          <div class="block-search__col">
+            <div class="chipx chipx--cp">Capital Humano</div>
+            <div class="chipx chipx--ci chipx--active">Proyectos de Investigación</div>
+            <div class="chipx chipx--cia">Centros e Investigación Asociativa</div>
+            <div class="chipx chipx--iai chipx--active">Investigación Aplicada e Innovación</div>
+            <div class="chipx chipx--rec">Redes, Estrategia y Conocimiento</div>
+          </div>
+          <div class="block-search__col borderx">
+            <div class="chipx">Próximo</div>
+            <div class="chipx chipx--active">Abierto</div>
+            <div class="chipx">En evaluación</div>
+            <div class="chipx chipx--active">Adjudicado</div>
+            <div class="chipx">Suspendido</div>
+            <div class="chipx">Patrocinio Institucional</div>
+            <div class="chipx">Desierto</div>
+          </div>
+        </div>
+        <br>
+
+        <v-text-field
+        v-model="searchQuery"
+        label="Buscar Concurso"
+        variant="outlined"
+        placeholder="Escribe para buscar..."
+        ></v-text-field>
+        <br>
+
+
+
         <v-list>
           <v-list-item
             v-for="(concurso, index) in filteredConcursos"

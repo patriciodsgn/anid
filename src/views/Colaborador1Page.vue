@@ -15,10 +15,10 @@
     <br>
     <p class="intro">En esta sección, encontrarás invitaciones para unirte como colaborador en distintos proyectos. Puedes revisar los detalles de cada invitación y tomar una decisión. Tienes la opción de <b>Aceptar</b> para unirte al equipo o <b>Rechazar</b> si decides no participar en el proyecto.</p> 
     <br>
-    <hr>
-    <br>
+    
     <h3>Invitaciones</h3>
     <br>
+    
 
 
 
