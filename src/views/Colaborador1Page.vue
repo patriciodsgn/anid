@@ -21,24 +21,17 @@
     <br>
 
 
-    <div class="line-data">
-      <div class="w20"><b>Autor</b></div>
-      <div class="w20"><b>Proyecto</b></div>
-      <div class="w10"><b>Año</b></div>
-      <div class="w20"><b>Estado</b></div>
-      <div class="w20"><b>Subdirección</b></div>
-      <div class="w10"></div>
-    </div>
 
 
     <div class="line-data" v-for="(invitacion, index) in invitaciones" :key="index">
-      <div class="w20">{{ invitacion.autor }}</div>
+      <div class="w20"><span class="small1">Autor:</span>{{ invitacion.autor }}</div>
       <div class="w20">
+        <span class="small1">Proyecto: </span>
         <a class="link-main" href="#">{{ invitacion.proyecto }}</a>
       </div>
-      <div class="w10">{{ invitacion.anio }}</div>
-      <div class="w20">{{ invitacion.estado }}</div>
-      <div class="w20">{{ invitacion.sub }}</div>
+      <div class="w10"><span class="small1">Año: </span>{{ invitacion.anio }}</div>
+      <div class="w20"><span class="small1">Estado: </span>{{ invitacion.estado }}</div>
+      <div class="w20"><span class="small1">Subdirección: </span>{{ invitacion.sub }}</div>
       <div class="w10">
         <div class="btn-success-v2" @click="aceptarInvitacion(index)">
           <v-icon left>mdi-check-bold</v-icon>
@@ -56,24 +49,18 @@
     <h3>Aceptadas</h3>
     <br>
 
-    <div class="line-data">
-      <div class="w20"><b>Autor</b></div>
-      <div class="w20"><b>Proyecto</b></div>
-      <div class="w10"><b>Año</b></div>
-      <div class="w20"><b>Estado</b></div>
-      <div class="w20"><b>Subdirección</b></div>
-      <div class="w10"></div>
-    </div>
+
 
 
     <div class="line-data" v-for="(aceptada, index) in invitacionesAceptadas" :key="index">
-      <div class="w20">{{ aceptada.autor }}</div>
+      <div class="w20"><span class="small1">Autor</span>{{ aceptada.autor }}</div>
       <div class="w20">
+        <span class="small1">Proyecto</span>
         <a class="link-main" href="#">{{ aceptada.proyecto }}</a>
       </div>
-      <div class="w10">{{ aceptada.anio }}</div>
-      <div class="w20">{{ aceptada.estado }}</div>
-      <div class="w20">{{ aceptada.sub }}</div>
+      <div class="w10"><span class="small1">Año</span>{{ aceptada.anio }}</div>
+      <div class="w20"><span class="small1">Estado</span>{{ aceptada.estado }}</div>
+      <div class="w20"><span class="small1">Subdirección</span>{{ aceptada.sub }}</div>
       <div class="w10">
       </div>
     </div>

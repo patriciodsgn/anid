@@ -1813,6 +1813,15 @@ v-list-item-group .v-list-item{
 }
 
 
+.line-text{
+  display: flex;
+  gap:8px
+}
+.small1{
+  display: block;
+  font-size: 80%;
+  opacity: 0.5;
+}
 .btn-success-v2,
 .btn-danger-v2{
   color: #fff;

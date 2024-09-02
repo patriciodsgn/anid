@@ -19,7 +19,7 @@
       <br>
       <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
         <v-row>
-          <v-col cols="12" sm="8">
+          <v-col cols="12" sm="12" md="8">
             <v-text-field
               v-model="formData.nombres"
               :rules="[v => !!v || 'Los nombres son requeridos']"
@@ -29,7 +29,7 @@
             ></v-text-field>
           </v-col>
 
-          <v-col cols="12" sm="8">
+          <v-col cols="12" sm="12" md="8">
             <v-text-field
               v-model="formData.primerApellido"
               :rules="[v => !!v || 'El primer apellido es requerido']"
@@ -38,7 +38,7 @@
               required
             ></v-text-field>
           </v-col>
-          <v-col cols="12" sm="8">
+          <v-col cols="12" sm="12" md="8">
             <v-text-field
             v-model="formData.segundoApellido"
               label="Segundo Apellido"
@@ -46,7 +46,7 @@
               ></v-text-field>
           </v-col>
             
-          <v-col cols="12" sm="8">
+          <v-col cols="12" sm="12" md="8">
             <v-text-field
               v-model="formData.nombreSocial"
               label="Nombre Social"
@@ -54,7 +54,7 @@
             ></v-text-field>
           </v-col>
 
-          <v-col cols="12" sm="8">
+          <v-col cols="12" sm="12" md="8">
             <v-text-field
               v-model="formData.pronombre"
               label="Pronombre"
@@ -159,13 +159,18 @@
               required
             ></v-text-field>
           </v-col>
+        </v-row>
 
-          <v-col cols="12">
-            <v-btn class="btn-primary-v2" type="submit" :disabled="!valid">
+        <br>
+        <br>
+        <v-row>
+          <v-col cols="12" sm="6" offset="0" offset-sm="3">
+            <div class="btn-primary-v1" type="submit" :disabled="!valid">
               Guardar
-            </v-btn>
+            </div>
           </v-col>
         </v-row>
+
       </v-form>
       
 

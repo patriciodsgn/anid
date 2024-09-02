@@ -14,13 +14,13 @@
 
 
       <h2 class="mb-4">Postulación Concursos</h2>
-      
+      <br>
       <div class="menu-line">
         <a class="menu-line__btn" href="#" @click.prevent="mostrarTodosConcursos">Todos los Concursos</a> 
         <a class="menu-line__btn" href="#" @click.prevent="mostrarPostulacionesActivas">Mis Postulaciones Activas</a>
         <a class="menu-line__btn" href="#" @click.prevent="mostrarHistorialPostulaciones">Mi Historial Postulaciones</a> 
       </div>
-      
+      <br>
       <div class="intro">
         
         <p><b>¡Bienvenido a tu espacio de gestión de concursos!</b></p>
@@ -46,28 +46,23 @@
         <br>  
         <h3>Mis Postulaciones</h3>
 
-        <v-list>
-          <v-list-item
-            v-for="(concurso, index) in misConcursos"
-            :key="index"
-          >
-            <div class="item__name">{{ concurso.nombre }}</div>
-
-            
-
-<!-- Botones de agregar y detalles con íconos -->
-
-            <!-- Botones de ver y eliminar con íconos -->
-            
-              <v-btn icon class="btn__icon--eye" @click="mostrarDetalleConcurso(concurso)">
-                <v-icon>mdi-eye</v-icon> <!-- Icono de ver concurso -->
-              </v-btn>
-              <v-btn icon class="btn__icon--delete" @click="eliminarConcurso(concurso)">
-                <v-icon>mdi-delete</v-icon> <!-- Icono de eliminar concurso -->
-              </v-btn>
-            
-          </v-list-item>
-        </v-list>
+        
+        
+        <div 
+          v-for="(concurso, index) in misConcursos"
+          :key="index"
+          class="line-data"
+        >
+          <div class="w80 borderx">{{ concurso.nombre }}</div>
+          <div class="w20 borderx">
+            <v-btn icon class="btn__icon--eye" @click="mostrarDetalleConcurso(concurso)">
+              <v-icon>mdi-eye</v-icon> <!-- Icono de ver concurso -->
+            </v-btn>
+            <v-btn icon class="btn__icon--delete" @click="eliminarConcurso(concurso)">
+              <v-icon>mdi-delete</v-icon> <!-- Icono de eliminar concurso -->
+            </v-btn>
+          </div>
+        </div>
 
         <!-- Botón para regresar a la lista de todos los concursos -->
         <!-- <v-btn @click="mostrarTodosConcursos">Volver a Todos los Concursos</v-btn> -->
@@ -93,7 +88,6 @@
       <div v-if="mostrarHist">
         <br>
         <h3>Historial de Postulaciones</h3>
-
         <v-table density="compact" class="table-hist">
           <thead>
             <tr>
@@ -170,6 +164,7 @@
           variant="outlined"
           placeholder="Escribe para buscar..."
         ></v-text-field>
+        <br>
         <h3>Todos los Concursos</h3>
         <v-list>
           <v-list-item
@@ -217,6 +212,7 @@
 <script>
 // Importa el archivo JSON desde la carpeta data
 import concursosData from "@/data/concursos.json";
+
 export default {
   data() {
     return {
@@ -231,8 +227,7 @@ export default {
       // Lista de todos los concursos cargados desde el JSON
       todosConcursos: concursosData, 
       // Lista de concursos seleccionados (Mis Concursos)
-      misConcursos: [],
-
+      misConcursos: JSON.parse(localStorage.getItem('misConcursos')) || [], // Recupera los concursos del localStorage
     };
   },
   computed: {
@@ -272,6 +267,8 @@ export default {
         this.snackbarMessage = `${concurso.nombre} ha sido agregado a Mis Postulaciones`;
         this.snackbar = true;
 
+        // Guardar en localStorage
+        localStorage.setItem('misConcursos', JSON.stringify(this.misConcursos));
       }
     },
     eliminarConcurso(concurso) {
@@ -279,6 +276,9 @@ export default {
       this.misConcursos = this.misConcursos.filter(c => c !== concurso);
       // Añadir de nuevo a "Todos los Concursos"
       this.todosConcursos.push(concurso);
+
+      // Actualizar localStorage
+      localStorage.setItem('misConcursos', JSON.stringify(this.misConcursos));
     },
     mostrarDetalleConcurso(concurso) {
       const popupWidth = 800;
@@ -292,12 +292,10 @@ export default {
         `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable,scrollbars`
       );
     }
-
   },
-
 };
 </script>
 
 <style scoped>
-
+/* Tu estilo aquí */
 </style>

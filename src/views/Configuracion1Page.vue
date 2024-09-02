@@ -125,7 +125,7 @@
 
         </v-row>
         <v-row>
-          <v-col cols="12" sm="6" offset="3">
+          <v-col cols="12" sm="6" offset="0" offset-sm="3">
             <div class="btn-primary-v1" type="submit" :disabled="!valid">
               Guardar Configuración
             </div>
