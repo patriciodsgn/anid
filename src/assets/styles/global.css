@@ -1840,6 +1840,8 @@ v-list-item-group .v-list-item{
   font-size: 80%;
   opacity: 0.5;
 }
+
+.btn-secondary-v2,
 .btn-success-v2,
 .btn-danger-v2{
   color: #fff;
@@ -1858,6 +1860,21 @@ border: none;
   background-color: #CBCBCB;
   
 }
+
+
+.smallx{
+  display: none;
+}
+
+.btn-secondary-v2{
+  background-color: #CBCBCB;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-secondary-v2:hover{
+  background-color: #acacac;
+}
+
 .btn-success-v2{
   background-color: #4CAF50;
   color: #fff;
@@ -1981,6 +1998,22 @@ border: none;
 .chipx--iai.chipx--active{border: 1px solid #E7A73D;}
 .chipx--rec.chipx--active{border: 1px solid #8BB554;}
 
+
+
+.advice-v1{
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+  padding: 0!important;
+}
+
+.advice-v1 p {
+  max-width: 300px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
 /* @media Media queries */
 
 /* xl */
@@ -2017,6 +2050,12 @@ border: none;
 @media (max-width: 1264px) {
   /* .footer{border: 11px solid hsl(183, 100%, 50%);} */
 
+  .smallx{
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
   .header__logo-img1,
   .header__logo-img2{
     display: none;
