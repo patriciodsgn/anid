@@ -17,7 +17,7 @@ export default {
   methods: {
     login() {
       // Simular un inicio de sesión exitoso
-      if (this.username === 'patricio@usach.cl' && this.password === '123456') {
+      if (this.username === 'usuario@demo.cl' && this.password === '123456') {
         console.log('Iniciar sesión con', this.username, this.password);
         // Redirigir a la página de Notificación 1
         this.$router.push('/notificaciones1');
