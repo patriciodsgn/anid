@@ -160,10 +160,11 @@
             
             <span class="smallx">concurso:</span>
             
-            <a :href="'/postulacion-concursos1/' + concurso.codigo" class="link-main">
+            <a :href="'/postulacion-concursos1/regular25'" class="link-main">
+            <!-- <a :href="'/postulacion-concursos1/' + concurso.codigo" class="link-main"> -->
               {{ concurso.nombre }}
             </a>
-            
+
           </div>
           <div class="w20">
             <div icon class="btn-secondary-v2" @click="mostrarDetalleConcurso(concurso)">
