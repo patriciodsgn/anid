@@ -1,1 +1,0 @@
-Concurso IDeA I+D 2025

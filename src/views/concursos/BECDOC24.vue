@@ -1,1 +1,0 @@
-Concurso Anillos Regulares de Tecnología 2024

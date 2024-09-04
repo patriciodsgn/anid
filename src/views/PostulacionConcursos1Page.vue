@@ -157,8 +157,13 @@
           class="line-data"
         >
           <div class="w80">
+            
             <span class="smallx">concurso:</span>
-            {{ concurso.nombre }}
+            
+            <a :href="'/postulacion-concursos1/' + concurso.codigo" class="link-main">
+              {{ concurso.nombre }}
+            </a>
+            
           </div>
           <div class="w20">
             <div icon class="btn-secondary-v2" @click="mostrarDetalleConcurso(concurso)">

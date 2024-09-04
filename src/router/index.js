@@ -14,6 +14,8 @@ import Curriculum2aPage from '@/views/Curriculum2aPage.vue';
 // import Curriculum2bPage from '@/views/Curriculum2bPage.vue';
 
 import PostulacionConcursos1Page from '@/views/PostulacionConcursos1Page.vue';
+import Regular25Page from '@/views/concursos/Regular25.vue';
+
 import PostulacionConcursos2aPage from '@/views/PostulacionConcursos2aPage.vue';
 import PostulacionConcursos2bPage from '@/views/PostulacionConcursos2bPage.vue';
 
@@ -43,6 +45,7 @@ const routes = [
   { path: '/curriculum2a', component: Curriculum2aPage },
   
   { path: '/postulacion-concursos1', component: PostulacionConcursos1Page },
+  { path: '/postulacion-concursos1/regular25', component: Regular25Page },
   { path: '/postulacion-concursos2a', component: PostulacionConcursos2aPage },
   { path: '/postulacion-concursos2b', component: PostulacionConcursos2bPage },
 

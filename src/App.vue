@@ -275,6 +275,7 @@ const isActiveRole1 = computed(() =>
   || route.path === '/notificaciones1'
   || route.path === '/colaborador1'
   || route.path === '/configuracion1'
+  || route.path === '/postulacion-concursos1/regular25'
 );
 
 const isActiveRole2a = computed(() => 
@@ -284,15 +285,17 @@ const isActiveRole2a = computed(() =>
   || route.path === '/notificaciones2a'
   || route.path === '/colaborador2a'
   || route.path === '/configuracion2a'
+  || route.path === '/postulacion-concursos2a/regular25'
 );
 
 const isActiveRole2b = computed(() => 
-  route.path === '/datos-principales2b'
+route.path === '/datos-principales2b'
   || route.path === '/curriculum2b'
   || route.path === '/postulacion-concursos2b'
   || route.path === '/notificaciones2b'
   || route.path === '/colaborador2b'
   || route.path === '/configuracion2b'
+  || route.path === '/postulacion-concursos2b/regular25'
 );
 
 

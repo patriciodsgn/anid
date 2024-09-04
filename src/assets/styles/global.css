@@ -1147,7 +1147,12 @@ h2 {
 }
 
 h3{
+  font-family: 'Roboto Slab', serif;
   color: #373737;
+  border-top: 1px solid #000;
+  font-size: 26px;
+  margin: 24px 0;
+  padding: 24px 0;
 }
 
 .menu-micro-login--anid-id,
