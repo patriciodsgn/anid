@@ -75,11 +75,11 @@ export default {
             xl="4" offset-xl="4"
             class="block">
 
-            <div class="menu-line">
-              <div class="menu-line__btn menu-line__btn--active" href="#">
+            <div class="menu-line-login">
+              <div class="btn-b" href="#">
                 <img class="menu-line__img1" :src="logoAnidId" alt="logo anid id">
               </div>
-              <a class="menu-line__btn" href="https://accounts.claveunica.gob.cl/accounts/login/?next=/openid/authorize/%3Fscope%3Dopenid%2Brun%2Bname%26state%3DnqmiW1oMJtQACjewZ4nEMTfibegqNiJ-MRaQeDCvOo8.-VHmiyKK0s4.client-home%26response_type%3Dcode%26client_id%3D67339e06f4b44f78994ff4785178807a%26redirect_uri%3Dhttps%253A%252F%252Fheimdall.mercadopublico.cl%252Fauth%252Frealms%252Fmercadopublico%252Fbroker%252Foidc%252Fendpoint%26prompt%3Dlogin%26nonce%3DH844XerKMk_hcGcDykrHFA">
+              <a class="btn-a" href="https://accounts.claveunica.gob.cl/accounts/login/?next=/openid/authorize/%3Fscope%3Dopenid%2Brun%2Bname%26state%3DnqmiW1oMJtQACjewZ4nEMTfibegqNiJ-MRaQeDCvOo8.-VHmiyKK0s4.client-home%26response_type%3Dcode%26client_id%3D67339e06f4b44f78994ff4785178807a%26redirect_uri%3Dhttps%253A%252F%252Fheimdall.mercadopublico.cl%252Fauth%252Frealms%252Fmercadopublico%252Fbroker%252Foidc%252Fendpoint%26prompt%3Dlogin%26nonce%3DH844XerKMk_hcGcDykrHFA">
                 <img class="menu-line__img2" :src="logoClaveUnica" alt="logo-clave-unica">
               </a>
             </div>
